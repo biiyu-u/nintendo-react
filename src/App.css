@@ -1,0 +1,1690 @@
+@font-face {
+    font-family: 'KoddiUDOnGothic-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/KoddiUDOnGothic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Freesentation-9Black';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2404@1.0/Freesentation-9Black.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+}
+
+html div{
+    box-sizing: border-box;
+}
+body,ul,li,h3,p {
+	margin:0;
+	padding:0;
+}
+li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	vertical-align: bottom;
+}
+body {
+	background-image:
+    linear-gradient(to bottom, rgba(220, 2, 19,1) 40%, rgba(0, 0, 0,1) 60%);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* 익스플로러 스크롤바 옵션 */
+    -ms-overflow-style: none;
+    /* 파이어폭스 스크롤바 옵션 */
+    scrollbar-width: none;
+
+    /*overflow-x: hidden;*/
+
+}
+
+/*******  [ header ]  ********/
+.header{
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.inner{
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    display: block;
+    width: 150px;
+    height: 37px;
+    background: url(../public/image/header/logo.png) no-repeat center center;
+    background-size: 150px 37px;
+}
+.header .gnb{
+    display: block;
+    display: flex;
+    align-items: center;
+}
+.header .gnb .menu{
+    display: flex;
+    gap: 65px;
+}
+.menu p {
+    color: black;
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.menu p:hover{
+    color: #dc0213;
+    cursor: pointer;
+}
+.gNav-megadrop{
+    background-color: white;
+    position: absolute;
+    width: 100dvw;
+    top:99px; left: 0;
+    border-top: 1px solid #ddd;
+
+    color: black;
+    font-family: 'KoddiUDOnGothic-Regular';
+}
+.gNav-megadrop img:hover{
+    opacity: 0.6;
+}
+.gNav-contentItem{
+    margin:30px auto;
+    text-align: center;
+}
+.gNav-body-bottom{
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0;
+    padding: 16px 0 0;
+
+    border-top: 1px solid #e6e6e6;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+}
+.gNav-body-bottom a{
+    color: black;
+}
+.gNav-body-bottom img{
+    width: 100px; height: 59.31px;
+}
+.thumb{
+    margin-bottom: 4px;
+}
+.gNav-megadrop .text{
+    font-size: 1.0em;
+    font-weight: lighter;
+}
+.gNav-body-list a{
+    font-size: 1.0em !important;
+    font-weight: lighter;
+}
+.gNav-body-list{
+    display: flex;
+    gap:50px;
+    justify-content: center;
+    align-items: center;
+}
+.gNav-body a:hover{
+    color: #dc0213;
+    cursor: pointer;
+}
+.software{
+    margin: 0 auto;
+}
+.gNav-body-elements-switch a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gNav-body-elements-smartphone a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.software .gNav-body-link{
+    padding: 30px;
+}
+.software .gNav-body-icon{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+.software .gNav-body-icon img{
+    margin-bottom: 10px;
+}
+.software .gNav-body-icon p{
+    color: #555;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+.software .gNav-body-bottom .gNav-body-list{
+    gap:50px;
+}
+.thumb-online{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+.software .gNav-body-bottom{
+    margin: 0 auto;
+}
+.software .gNav-body-bottom img{
+    margin-right:50px ;
+}
+.topic p{
+    font-size: 0.8em !important;
+}
+.topic .gNav-body-list{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+.topic .gNav-body-list a{
+    color: #555;
+    font-weight: bold;
+    font-size: 0.8em;
+    line-height: 20px;
+}
+.topic .gNav-body-list a img{
+    margin-bottom: 10px;
+}
+.topic .gNav-body-list .gNav-body-elements{
+    width: 226.41px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+.topic .status{
+    position: absolute;
+    top: 235px;
+    display: flex;
+    color: #999;
+    font-size: 0.5em;
+}
+.topic .gNav-body-bottom {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.topic .gNav-body-bottom a:hover{
+    color: #dc0213;
+    cursor: pointer;
+}
+
+/*******  [ Sec 01 ]  ********/
+#visual{
+    width: 1184px;
+    margin: 0 auto;
+}
+.visual {
+    width: 100%; height: 840px;
+    background-size: cover;
+    background-image:
+        linear-gradient(to bottom, rgba(220, 2, 19,0.5) 0%, rgba(220, 2, 19,1) 90%),
+        url(../public/image/Sec01/peach.png);
+    background-repeat: no-repeat;
+}
+.nintendo {
+    margin: 100px auto;
+    width: 1166px; height: 489px;
+    background-image: url(../public/image/Sec01/nintendo_OLED.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top:120px;
+}
+.nintendo-slide {
+    position: relative;
+    width: 744px;
+    height: auto;
+    background-image: url(../public/image/Sec01/slide.png);
+    background-position: left;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -197px;
+    aspect-ratio: 744 / 418;
+}
+/* 1200px이하로 */
+.nintendo::before{
+    content: '';
+    display: block;
+    width: 1190px; height: 156px;
+    background-image: url(../public/image/Sec01/shadow.png);
+    background-size: cover;
+    position: relative;
+    top:420px; left:-15px;
+}
+.slide-prev{
+    width: 40px; height: 40px;
+    border-radius: 30px;
+
+    position: relative;
+    left: 28px; top: 86px;
+}
+.slide-next{
+    width: 40px; height: 40px;
+    border-radius: 30px;
+
+    position: relative;
+    left: 105px; top: 46px;
+}
+.bg-orange {
+    width: 100%; height: auto;
+    aspect-ratio: 1199/2452;
+    position: absolute;
+    left: 0px; top: 800px;
+    z-index: -999;
+}
+
+/*******  [ Sec 02 ]  ********/
+#best-game{
+    width: 100%;
+    margin: 100px auto;
+}
+.best-game{
+    box-sizing:border-box;
+    text-align: center;
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.best-game-title{
+    font-size: 4rem;
+    z-index: 999;
+}
+.best-game-list{
+    display: flex;
+    align-items: center;
+}
+.prevBtn{
+    width: 72px; height: 72px;
+    background-image: url(../public/image//Sec02/prev_btn.png);
+    background-size: cover;
+    z-index: 999;
+}
+.nextBtn{
+    width: 72px; height: 72px;
+    background-image: url(../public/image//Sec02/next_btn.png);
+    z-index: 999;
+    background-size: cover;
+}
+.best-main {
+    width: 400px; height: 520px;
+    border-radius: 30px;
+    background-color: black;
+    background-image: url(../public/image/Sec02/wonder.png);
+    background-position: right bottom;
+
+    box-shadow: 0px 0px 30px black;
+    z-index: 999;
+}
+.best-left {
+    width: 300px; height: 396px;
+    border-radius: 30px;
+    background-color: black;
+    
+    position: relative;
+    left:90px;
+
+    box-shadow: 0px 0px 30px black;
+    z-index: 998;
+}
+.best-left:before {
+    content: ' ';
+    background-image: url(../public/image/Sec02/splatoon.png);
+    background-position: left top;
+    border-radius: 30px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 998;
+}
+
+.best-right {
+    width: 300px; height: 396px;
+    border-radius: 30px;
+    background-color: black;
+
+    position: relative;
+    right:90px;
+
+    box-shadow: 0px 0px 30px black;
+    z-index: 998;
+}
+.best-right:before {
+    content: ' ';
+    background-image: url(../public/image/Sec02/zelda.png);
+    background-position: center top;
+    border-radius: 30px;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 998;
+}
+.best-game-wrapper {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+
+    position: relative;
+    top:60px;
+}
+.best-game-text{
+    color: white;
+    margin: 100px auto;
+    z-index: 999;
+}
+.best-game-text h3{
+    font-size: 20pt;
+}
+.best-game-text p{
+    font-weight: 500;
+}
+.bg-mario {
+    position: absolute;
+    width: 600px; height: 497.89px;
+
+    bottom:-1000px; left: -5%;
+    z-index: -1;
+
+    opacity: 0.5;
+}
+
+/*******  [ Sec 03 ]  ********/
+#new-game{
+    width: 1184px;
+    margin: 200px auto;
+}
+.new-game-title{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.new-game-list{
+    align-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+
+    margin: 0 auto;
+    position: relative;
+    padding-inline-start: 0;
+}
+.contents{
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    
+    width: 40%;
+
+    color: white;
+    font-family: 'KoddiUDOnGothic-Regular';
+
+    margin-top: 60px;
+}
+.contents p{
+    font-weight: 500;
+}
+.contents:nth-child(odd) {
+    padding-top: 60px;
+}
+.contents:first-child {
+    margin-top: 120px;
+}
+.container {
+    width: 361px; height: 585px; transition : all 0.1s;
+    position: relative;
+}
+.card {
+    
+    width: 361px; height: 585px;
+    background-image: url(../public/image/Sec03/Luigi_mansion.png);
+    background-size: cover;
+ 
+    box-shadow: 0px 0px 30px black;
+    border-radius: 15px;
+ }
+ .contents:nth-child(2) .card{
+     background-image: url(../public/image/Sec03/paper-mario.png);
+ }
+ .contents:nth-child(3) .card{
+     background-image: url(../public/image/Sec03/peach_showtime.png);
+ }
+ .contents:nth-child(4) .card{
+     background-image: url(../public/image/Sec03/mario_vs_donkeykong.png);
+ }
+ .new-game-text{
+    text-align: left;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+.new-game-text p{
+    padding-top: 10px;
+}
+
+/*******  [ Sec 04 ]  ********/
+#online{
+    width: 1184px;
+    margin: 100px auto;
+}
+.online-logo{
+    position: relative;
+
+    background-image: url(../public/image/Sec04/online_logo.png);
+    width: 700px; height: 231px;
+    background-size: cover;
+    margin: 160px auto;
+    margin-bottom: 0px;
+    z-index: 997;
+}
+.OLED{
+    position: relative;
+    background-image: url(../public/image/Sec04/nintendo_OLED.png);
+    background-size: cover;
+    width: 876px; height: 460px;
+    margin: 0px auto;
+    top:-50px;
+    margin-bottom: 250px;
+    z-index: 998;
+    -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.4));
+}
+.OLED p{
+    position: relative;
+    top:500px;
+
+    color: white;
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    font-size: 1.3em;
+
+    text-align:center;
+    z-index: 999;
+}
+.bg-star {
+    position: absolute;
+    width: 250px; height: 254px;
+
+    bottom:-3000px; right: 15%;
+    z-index: 2;
+
+    opacity: 0.5;
+}
+
+/*******  [ Sec 05 ]  ********/
+#service{
+    width: 1184px;
+    margin: 0 auto;
+}
+.service-list {
+    margin: 60px auto;
+    width: 100%;
+}
+.service-title{
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.service-list li{
+    position: relative;
+
+    float: left;
+    width: 48%; height: 350px;
+    /* aspect-ratio: 530/350; */
+    background:linear-gradient(-20deg,rgba(0,0,0,1)0%, rgba(139,11,21,1)100%);
+
+    margin: 10px;
+    border: 4px solid #8b0b15;
+    border-radius: 30px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+}
+.service li:hover{
+    background:linear-gradient(-20deg,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
+    border: 4px solid #ea6325;
+}
+.service li:nth-child(3){
+    /* aspect-ratio: 346.6/280; */
+    width: 31.5%; height:280px;
+}
+.service li:nth-child(4){
+    /* aspect-ratio: 346.6/280; */
+    width: 31.5%; height:280px;
+}
+.service li:nth-child(5){
+    /* aspect-ratio: 346.6/280; */
+    width: 31.5%; height:280px;
+}
+.service li p{
+    margin: 30px;
+    color: white;
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+}
+
+.service li img{
+    position: absolute;
+    right: 0px; bottom:0px;
+}
+.service li:first-child img{
+    width: 257px; height: 400px;
+    right:40px; bottom:-120px;
+}
+.service li:nth-child(2) img{
+    width: 244px; height: 316px;
+    right:40px; bottom:-20px;
+}
+.service li:nth-child(3) img{
+    width: 215px; height: 152px;
+    right:20px; bottom:20px;
+}
+.service li:nth-child(4) img{
+    width: 300px; height: 220px;
+    right:-20px; bottom:-40px;
+}
+.service li:nth-child(5) img{
+    width: 180px; height: 167px;
+    right:20px; bottom:20px;
+}
+.bg-kirby{
+    position: absolute;
+    width: 392px; height: 378px;
+
+    bottom:-4050px; left: 7%;
+    z-index: -1;
+
+    opacity: 0.5;
+}
+
+/*******  [ Sec 06 ]  ********/
+#moreservice{
+    width: 1200px;
+    margin: 200px auto;
+}
+.moreservice{
+    color: #fff;
+    overflow: hidden;
+    padding-top: 0;
+    z-index: 2;
+}
+.moreservice h3 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 50px;
+    margin: 50px;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 120px;
+}
+.slide-box{
+    padding: 0 0 200px;
+}
+.slide-container{
+    cursor: ew-resize;
+    display: flex;
+    justify-content: center;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    position: relative;
+    -webkit-transform: rotate(6deg);
+    transform: rotate(6deg);
+    width: 100%;
+    z-index: 1;
+}
+.slide-wrap{
+    flex-grow: 0;
+    height: 27.8645833333vw;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    width: 27.8645833333vw;
+    will-change: transform;
+}
+.slide{
+    height: 100%;
+    padding: .9114583333vw;
+    position: absolute;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    width: 100%;
+}
+.slide-content{
+    background: linear-gradient(-20deg,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
+    border-radius: .8125rem;
+    height: 95%;
+    position: relative;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    width: 95%;
+    border:4px solid #ea6325;
+    box-sizing: border-box; 
+    
+}
+.slide-content img{
+    left: 50%;
+    pointer-events: none;
+    position: relative;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 12vw;
+}
+.slide-content span{
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-size: .9375rem;
+    font-weight: bold;
+    left: 1.25rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1.25rem;
+}
+
+/*******  [ Sec 07 ]  ********/
+#plan{
+    width: 1184px;
+    margin: 0 auto;
+}
+.plan{
+    position: relative;
+}
+.plan img{
+    position: absolute;
+    bottom: 880px; right: 20%;
+}
+.plan-wrapper{
+    width: 100%;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.personal-plan{
+    width: 533px; height: 626px;
+    aspect-ratio: 533/626;
+    box-sizing: border-box;
+    border: 3px solid white;
+    border-radius: 30px;
+    margin: 50px;
+    padding: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.personal-plan div:nth-child(2) ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:20px;
+    align-items: center;
+
+    line-height: 40px;
+}
+.personal-plan div:nth-child(2) ul p:nth-child(odd){
+    color: #999;
+}
+.personal-plan div:nth-child(2) ul li:nth-child(1) p:nth-child(1){
+    font-size: 1.3em;
+}
+.personal-plan div:nth-child(2) ul li:nth-child(1) p:nth-child(2){
+    font-size: 1.7em;
+}
+.personal-plan div:nth-child(2) ul li:nth-child(2) p:nth-child(1){
+    font-size: 1.8em;
+}
+.personal-plan div:nth-child(2) ul li:nth-child(2) p:nth-child(2){
+    font-size: 2.5em;
+}
+
+.personal-plan div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.personal-plan div:nth-child(3) h3{
+    font-size: 1.5em;
+}
+.personal-plan div:nth-child(3) p:nth-child(2){
+    font-size: 1.2em;
+    color: #666;
+}
+.personal-plan div:nth-child(3) p:nth-child(3){
+    font-size: 2.5em;
+    background: linear-gradient(to right bottom,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.family-plan{
+    width: 533px; height: 626px;
+    box-sizing: border-box;
+    border: 3px solid #ea6325;
+    background:linear-gradient(-40deg,rgba(0,0,0,1)40%, rgba(139,11,21,1)100%);
+    border-radius: 30px;
+    margin: 50px;
+    padding: 70px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.family-plan div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 40px;
+}
+.family-plan div:nth-child(2) p:nth-child(1){
+    color: #666;
+    font-size: 1.8em;
+}
+.family-plan div:nth-child(2) p:nth-child(2){
+    font-size: 2.5em;
+}
+.family-plan div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+}
+.family-plan div:nth-child(3) h3{
+    font-size: 1.5em;
+}
+.family-plan div:nth-child(3) p:nth-child(2){
+    font-size: 1.2em;
+    color: #666;
+}
+.family-plan div:nth-child(3) p:nth-child(3){
+    font-size: 2.5em;
+    background: linear-gradient(to right bottom,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.personal-plan h1, .family-plan h1{
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.personal-plan h3, .family-plan h3{
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.personal-plan p, .family-plan p{
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/*******  [ Bottom ]  ********/
+#bottom{
+    width: 1184px;
+    margin: 0 auto;
+}
+.bottom{
+    width: 100%;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 90px;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    letter-spacing: 0.5px;
+
+}
+.bottom-logo{
+    margin-bottom: 30px;
+}
+.bottom a{
+    color:#666;
+}
+.bottom h3 {
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+}
+.bottom-menu-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.bottom-menu{
+    line-height: 50px;
+}
+.bottom-menu-list{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+}
+.bottom-service-wrapper{
+    width: 260px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    gap:150px;
+}
+.bottom-sns ul{
+    display: flex;
+    justify-content: space-between;
+    gap:17px;
+    
+}
+.bottom-service ul{
+    display: flex;
+    gap:20px;
+    align-items: center;
+    
+}
+
+/*******  [ Footer ]  ********/
+#footer{
+    width: 1184px;
+    margin: 0 auto;
+}
+.footer{   
+    border-top: 2px solid #ddd ;
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    letter-spacing: 0.5px;
+    color: #666;
+}
+.footer p{
+    line-height: 1.4em;
+}
+.footer a{
+    color:#666;
+}
+
+
+
+
+@media (max-width: 1200px){
+    #visual {width:100%;}
+    .nintendo {
+        width:100%;
+        background-image: none;
+        margin: 0 auto;
+        top: 100px; left: 0;
+        position: unset;
+        margin-left: 0; margin-right: 0;
+    }
+
+    .nintendo-slide {
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        height: auto;
+        max-width: 100vw; 
+        max-height: 674px; 
+        aspect-ratio: 744 / 418; 
+
+        background-position:left;
+        background-size: cover;
+    }
+
+    .nintendo::before {
+        display: none;
+    }
+    .visual {
+        background-image: none;
+    }
+    
+    /*******  [ Sec 02 ]  ********/
+    #best-game{
+        width: 100%;
+    }
+    .best-game-title{
+        font-size: 3.5rem;
+    }
+    .best-game-wrapper{
+        width: 100%;
+    }
+    .prevBtn{
+        width: 60px; height: auto;
+        aspect-ratio: 60/60;
+        position: relative;
+        left: 7%;
+    }
+    .nextBtn{
+        width: 60px; height: auto;
+        aspect-ratio: 60/60;
+        position: relative;
+        right: 7%;
+    }
+    .best-main {
+        width: 300px; height: auto;
+        border-radius: 20px;
+        aspect-ratio: 400 / 520;
+        background-size: 250%;
+    }
+    .best-left {
+        width: 250px; height: auto;
+        border-radius: 20px;
+        aspect-ratio: 300 / 396;
+        left:13%;
+    }
+    .best-left:before {
+        border-radius: 20px;
+        aspect-ratio: 300 / 396;
+    
+        background-size: 250%;
+    }
+    
+    .best-right {
+        width: 250px; height: auto;
+        border-radius: 20px;
+        aspect-ratio: 300 / 396;
+        right: 13%;
+    }
+    .best-right:before {
+        border-radius: 20px;
+        aspect-ratio: 300 / 396;
+    
+        background-size: 250%;
+    }
+    .best-game-text h3{
+        font-size: 1.5em;
+    }
+    .best-game-text p{
+        margin-top: 10px;
+    }
+    .bg-mario{
+        width: 450px; height: auto;
+        aspect-ratio: 600/497.89;
+        bottom:-400px; left: -5%;
+    }
+    /*******  [ Sec 03 ]  ********/
+    #new-game{
+        width: 100%;
+    }
+    .new-game-title{
+        font-size: 3.5rem;
+    }
+    .container {
+        width: 320px; height: auto;
+        aspect-ratio: 361 / 585;
+        margin: 0 auto;
+    }
+    .card {
+        width: 320px; height: auto;
+        aspect-ratio: 361 / 585;
+        border-radius: 20px;
+     }
+    /*******  [ Sec 04 ]  ********/
+    #online{
+        width: 100%;
+    }
+    .online-logo{
+        aspect-ratio: 700 / 231;
+        width: 60%; height: auto;
+    }
+    .OLED {
+        width: 80%; height: auto;
+        aspect-ratio: 876/460;
+    }
+    .OLED p{
+        top:530px;
+    }
+    .bg-star {
+        width: 225px; height: auto;
+        aspect-ratio: 250/254;
+    
+        bottom:-2550px; right: 15%;
+        z-index: 2;
+    
+        opacity: 0.5;
+    }
+    /*******  [ Sec 05 ]  ********/
+    #service{
+        width: 100%;
+    }
+    .service-title{
+        font-size: 3.5rem;
+    }
+    .service-list {
+        width: 80%;
+    }
+    .service-list li{
+        width: 48%; height: auto;
+        aspect-ratio: 530/350;
+        border-radius: 27px;
+        margin: 1%;
+    }
+    .service li:nth-child(3){
+        aspect-ratio: 346.6/280;
+        width: 31%; height: auto;
+    }
+    .service li:nth-child(4){
+        aspect-ratio: 346.6/280;
+        width: 31%; height: auto;
+    }
+    .service li:nth-child(5){
+        aspect-ratio: 346.6/280;
+        width: 31%; height: auto;
+    }
+    .service li p{
+        margin: 20px;
+        font-size: 1.2em;
+    }
+    .service li:first-child img{
+        width: 55%; height: auto;
+        aspect-ratio: 257/400;
+        right:40px; bottom:-100px;
+    }
+    .service li:nth-child(2) img{
+        width: 50%; height: auto;
+        aspect-ratio: 244/316;
+        right:40px; bottom:-30px;
+    }
+    .service li:nth-child(3) img{
+        width: 70%; height: auto;
+        aspect-ratio: 215/152;
+        right:20px; bottom:20px;
+    }
+    .service li:nth-child(4) img{
+        width: 80%; height: auto;
+        aspect-ratio: 300/220;
+        right:-20px; bottom:-20px;
+    }
+    .service li:nth-child(5) img{
+        width: 55%; height: auto;
+        aspect-ratio: 180/167;
+        right:20px; bottom:10px;
+    }
+    .bg-kirby{
+        width: 342px; height: auto;
+        aspect-ratio: 392/378;
+    
+        bottom:-3600px; left: 2%;
+    }
+    /*******  [ Sec 06 ]  ********/
+    #moreservice{
+        width: 100%;
+    }
+    .plusimg {
+        width: 100%;
+    }
+    .moreservice h3 {
+        font-size: 3.5rem;
+    }
+    .slide-content{
+        height: 130%; width: 130%;
+        position: relative;
+    }
+    .slide-content img{
+        top: 55%;
+        width: 20vw;
+    }
+    .slide-content span{
+        font-size: 1rem;
+    }
+    /*******  [ Sec 07 ]  ********/
+    #plan{
+        width: 100%;
+    }
+    .plan-wrapper{
+        width: 90%;
+        gap: 5%;
+    }
+    .plan img{
+        width: 400px; height: auto;
+        aspect-ratio: 673/392;
+        bottom: 870px; right: 10%;
+    }
+    .personal-plan{
+        margin: 100px auto;
+        width: 470px; height: 570px;
+    }
+    .family-plan{
+        margin: 100px auto;
+        width: 470px; height: 570px;
+    }
+    /*******  [ Bottom ]  ********/
+    #bottom{
+        width: 100%;
+    }
+    .bottom{
+        padding: 50px;
+        box-sizing: border-box;
+    }
+    .bottom-menu-wrapper{
+        flex-direction: column;
+    }
+    .bottom-service-wrapper{
+        margin-top: 50px;
+        width:auto;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    
+    
+    /*******  [ Footer ]  ********/
+    #footer{
+        width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+    .footer{
+        padding: 0px;
+    }
+    .footer p{
+        font-size: 0.8em
+    }
+}
+
+@media (max-width: 1041px){
+.header .inner .gnb p {
+    font-size: 1.2em ;
+}
+}
+@media (max-width: 996px){
+.header .inner .gnb p {
+    font-size: 1.1em ;
+}
+}
+@media (max-width: 950px){
+.header .inner .gnb p {
+    font-size: 1.0em ;
+}
+.header .gnb .menu{
+    gap:60px;
+}
+
+.container{
+    width: 100%; height: auto;
+}
+.card{
+    width: 100%; height: auto;
+}
+}
+@media (max-width: 907px){
+    .bottom-menu-list li ul li a{
+        font-size: 0.9em;
+    }
+}
+@media (max-width: 885px){
+.header .gnb .menu{
+    gap:50px;
+}
+}
+@media (max-width: 852px){
+    .bottom-menu-list li ul li a{
+        font-size: 0.8em;
+    }
+}
+@media (max-width: 845px){
+.header .gnb .menu{
+    gap:40px;
+}
+}
+@media (max-width: 816px){
+    .best-game-list{
+        width: 100%;
+    }
+}
+@media (max-width: 813px){
+    .bottom-menu-list li h3{
+        font-size: 1em;
+    }
+}
+@media (max-width: 805px){
+.header .gnb .menu{
+    gap:34px;
+}
+}
+@media (max-width: 797px){
+    .bottom-menu-list li ul li a{
+        font-size: 0.7em;
+    }
+}
+@media (max-width: 781px){
+.header .gnb .menu{
+    gap:30px;
+}
+}
+@media (max-width: 576px){
+.header .inner .gnb p {
+font-size: 0.9em ;
+}
+.header .gnb .menu{
+    gap:25px;
+}
+}
+@media (max-width: 529px){
+.header .inner .gnb p {
+font-size: 0.85em ;
+}
+.header .gnb .menu{
+    gap:20px;
+}
+}
+
+
+
+
+@media (max-width: 768px){
+body{
+    background-image:
+    linear-gradient(to bottom, rgba(220, 2, 19,1) 35%, rgba(0, 0, 0,1) 45%);
+}
+.inner{
+    width: 100%;
+    display: block;
+    padding: 0px !important;
+}
+.header{
+    background-color: #dc0213;
+}
+.logo{
+    width: 101px;
+    height: 25px;
+    background: url(../public/image/header/logo_mobile.png) no-repeat center center;
+    background-size: cover;
+    margin:20px;
+}
+.inner .gnb{
+    margin: 20px;
+}
+.inner .gnb .menu{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.gNav-megadrop{
+    border-top: 3px solid #fff;
+}
+.menu p {
+    color: #f5b4b9;
+    font-size: 1.0em;
+    letter-spacing: -1px;
+}
+.menu p:hover{
+    color: #fff;
+}
+.visual{
+    height: auto;
+    overflow: hidden;
+}
+.bg-orange{
+    width: 100%;
+}
+
+
+/*드롭다운*/
+.gNav-megadrop p{
+    color: #000;
+}
+.gNav-megadrop p:hover{
+    color: #dc0213;
+}
+.gNav-megadrop {
+    border-top : 0px;
+}
+.gNav-body-upper img{
+    width: 680px; height: auto;
+    aspect-ratio: 800/124;
+}
+.gNav-body-bottom{
+    gap: 40px;
+}
+
+.software .gNav-body-list{
+    gap:0;
+}
+.software .gNav-body-list p{
+    font-size: 0.6em !important;
+}
+
+.gNav-body-elements-switch .gNav-body-thumb img{
+    width: 90px !important; height: auto !important;
+    aspect-ratio: 140/144;
+}
+.gNav-body-elements-switch .gNav-body-icon img{
+    width: 40px !important; height: auto !important;
+    aspect-ratio: 48.25/52.63;
+}
+.gNav-body-elements-smartphone .gNav-body-thumb img{
+    width: 65px !important; height: auto !important;
+    aspect-ratio: 81/144;
+}
+.gNav-body-elements-smartphone .gNav-body-icon img{
+    width: 35px !important; height: auto !important;
+    aspect-ratio: 33.95/60;
+}
+.gNav-body-elements-smartphone a{
+    padding-left: 0px !important;
+}
+.software .gNav-body-bottom{
+    padding-top: 30px;
+}
+.topic p{
+    font-size: 0.7em !important;
+}
+.topic .gNav-body-list{
+    gap: 4px ;
+}
+.topic .gNav-body-list a{
+    font-size: 0.8em;
+}
+.topic .gNav-body-list img{
+    width: 95% !important ; height: auto !important ;
+    aspect-ratio: 226.41/127.34;
+}
+.topic .status{
+    top: 210px;
+}
+.topic .gNav-body-bottom {
+    padding: 40px;
+}
+
+.topic .gNav-body-bottom a:hover{
+    color: #dc0213;
+    cursor: pointer;
+}
+
+.nintendo-slide {
+    top:100px;
+}
+/*******  [ Sec 02 ]  ********/
+.best-game-title{
+    font-size: 3rem;
+}
+.best-game-wrapper{
+    margin: 0 auto;
+}
+.prevBtn{
+    display: none;
+}
+.nextBtn{
+    display: none;
+}
+.best-game-text h3{
+    font-size: 1.5em;
+}
+.best-game-text p{
+    margin-top: 10px;
+}
+.bg-mario{
+    width: 400px; height: auto;
+    aspect-ratio: 600/497.89;
+    bottom:-500px; left: -5%;
+}
+/*******  [ Sec 03 ]  ********/
+.new-game-title{
+    font-size: 3rem;
+}
+.card {
+    border-radius: 10px;
+ }
+/*******  [ Sec 04 ]  ********/
+.OLED{
+    background-image: url(../public/image/Sec04/nintendo_OLED_768.png);
+    aspect-ratio: 541 / 477;
+    width: 50%; height: auto;
+}
+.OLED p{
+    top:390px;
+}
+.bg-star {
+    width: 200px; height: auto;
+    aspect-ratio: 250/254;
+
+    bottom:-1900px; right: 7%;
+    z-index: 2;
+
+    opacity: 0.5;
+}
+/*******  [ Sec 05 ]  ********/
+.service-title{
+    font-size: 3rem;
+}
+.service-list li{
+    border: 3px solid #8b0b15;
+    border-radius: 15px;
+}
+.service-list li:hover{
+    border: 3px solid #ea6325;
+}
+.service li p{
+    margin: 20px;
+    font-size: 0.7em;
+}
+.bg-kirby{
+    width: 292px; height: auto;
+    aspect-ratio: 392/378;
+
+    bottom:-2800px; left: 3%;
+}
+
+.service-list li{
+    width: 98%; height: auto;
+    border-radius: 27px;
+    margin: 1%;
+}
+.service li:nth-child(2){
+    aspect-ratio: 346.6/280;
+    width: 48%; height: auto;
+}
+.service li:nth-child(3){
+    aspect-ratio: 346.6/280;
+    width: 48%; height: auto;
+}
+.service li:nth-child(4){
+    aspect-ratio: 346.6/280;
+    width: 48%; height: auto;
+}
+.service li:nth-child(5){
+    aspect-ratio: 346.6/280;
+    width: 48%; height: auto;
+}
+.service li p{
+    margin: 20px;
+    font-size: 1em;
+}
+.service li:first-child img{
+    width: 55%; height: auto;
+    aspect-ratio: 257/400;
+    right:40px; bottom:-100px;
+}
+.service li:nth-child(2) img{
+    width: 60%; height: auto;
+    aspect-ratio: 244/316;
+    right:40px; bottom:-30px;
+}
+.service li:nth-child(3) img{
+    width: 70%; height: auto;
+    aspect-ratio: 215/152;
+    right:20px; bottom:20px;
+}
+.service li:nth-child(4) img{
+    width: 80%; height: auto;
+    aspect-ratio: 300/220;
+    right:-20px; bottom:-20px;
+}
+.service li:nth-child(5) img{
+    width: 55%; height: auto;
+    aspect-ratio: 180/167;
+    right:20px; bottom:10px;
+}
+/*******  [ Sec 06 ]  ********/
+.plusimg{
+    aspect-ratio: 1184/96;
+    width: 100%; height: auto;
+}
+.moreservice h3 {
+    font-size: 3rem;}
+.slide-box{
+    padding: 0 0 400px;
+}
+.slide-content{
+    height: 170%; width: 170%;
+    position: relative;
+}
+.slide-content img{
+    top: 55%;
+    width: 30vw;
+}
+.slide-content span{
+    font-size: 1rem;
+}
+/*******  [ Sec 07 ]  ********/
+.plan{
+    position: relative;
+}
+.plan img{
+    width: 200px; height: auto;
+    aspect-ratio: 673/392;
+    bottom: 1260px; right: 60px;
+}
+.plan-wrapper{
+    padding: 0px;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    display: block;
+}
+.personal-plan{
+    margin: 100px auto !important;
+    width: 450px; height: 500px;
+}
+.family-plan{
+    margin: 100px auto !important;
+    width: 450px; height: 500px;
+}
+/*******  [ Bottom ]  ********/
+#bottom{
+    padding: 50px !important;
+    box-sizing: border-box !important;
+}
+.bottom{
+    background-color: white;
+    padding: 0px !important;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    letter-spacing: 0.5px;
+
+}
+.bottom-logo{
+    margin-left: 0;
+}
+.bottom-logo .logo{
+    background-image: url(../public/image/header/logo.png);
+    margin: 0;
+}
+.bottom h3 {
+    font-size: 1em;
+}
+.bottom a{
+    font-size: 0.8em;
+}
+.bottom-menu-wrapper{
+    flex-direction: column;
+}
+.bottom-menu{
+    line-height: 35px;
+}
+.bottom-menu-list{
+    justify-content: space-between;
+    gap: 10px;
+}
+.bottom-service-wrapper{
+    width: 300px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    gap:30px;
+
+}
+.bottom-sns ul{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    
+}
+.bottom-service ul{
+    display: flex;
+    gap:20px;
+    align-items: center;
+}
+
+/*******  [ Footer ]  ********/
+#footer{
+    padding: 30px !important;
+    padding-right: 0px !important;
+}
+.footer{
+    padding: 0px;
+}
+.footer p{
+    font-size: 0.8em !important;
+}
+}
