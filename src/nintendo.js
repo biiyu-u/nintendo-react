@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Nintendo = () => {
     // 드롭다운
@@ -64,6 +66,37 @@ const Nintendo = () => {
             }
           });
         }, []);
+
+        //[ Sec 04 ]
+        gsap.registerPlugin(ScrollTrigger);
+
+        useEffect(() => {
+            gsap.to('.OLED', {
+              backgroundImage: "url('image/Sec04/nintendo_splatoon.png')",
+              scrollTrigger: {
+                trigger: '.OLED',
+                start: '30% center',
+                end: '60% center',
+                toggleActions: 'play none none reverse',
+                scrub: true,
+                pin: true,
+                markers:true,
+              },
+            });
+            gsap.to('.OLED', {
+              backgroundImage: "url('image/Sec04/nintendo_zelda.png')",
+              scrollTrigger: {
+                trigger: '.OLED',
+                start: '60% center',
+                end: 'bottom center',
+                toggleActions: 'play none none reverse',
+                scrub: true,
+                pin: true,
+                markers:true,
+              },
+            });
+          }, []);
+        
 
     
   return (
@@ -398,7 +431,6 @@ const Nintendo = () => {
         <div id="online">
             <div className="online-logo"></div>
             <div className="OLED">
-                <p>Nintendo Switch OLED</p>
             </div>
         </div>
         <img className="bg-star" src="image/Sec04/bg_star.png" alt="날고있는 별 이미지" />

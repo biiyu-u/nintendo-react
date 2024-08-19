@@ -539,18 +539,6 @@ body {
     z-index: 998;
     -webkit-box-reflect: below 0 linear-gradient(transparent, rgba(0,0,0,0), rgba(0,0,0,0.4));
 }
-.OLED p{
-    position: relative;
-    top:500px;
-
-    color: white;
-    font-family: 'KoddiUDOnGothic-Regular';
-    font-weight: bold;
-    font-size: 1.3em;
-
-    text-align:center;
-    z-index: 999;
-}
 .bg-star {
     position: absolute;
     width: 250px; height: 254px;
