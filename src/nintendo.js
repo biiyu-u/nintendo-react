@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Nintendo = () => {
     // 드롭다운
@@ -33,52 +33,37 @@ const Nintendo = () => {
         }
 
     //[ Sec 03 ]
-    // useRef
-    let container = document.querySelectorAll('.new-game-list .contents .container');
-
-    // useEffect
-    container.forEach(container => {
-        container.addEventListener('mousemove', function(e){
+        const containersRef = useRef([]);
+      
+        useEffect(() => {
+          const handleMouseMove = (e, container) => {
             let x = e.offsetX;
             let y = e.offsetY;
             let rotateY = -((x / container.clientWidth) * 2 - 1) * 20;
             let rotateX = (((y / container.clientHeight) * 2 - 1) * 20);
-    
+      
             container.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
-  
-    
-
-    container.addEventListener('mouseout', function(){
-        container.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
-        });
-    });
-
-    /*
-    useEffect(() => {
-    if (fixedPosition) {
-      setPosition(fixedPosition);
-      return;
-    }
-
-    const handleMouseMove = (event: MouseEvent) => {
-      if (containerRef.current && tooltipRef.current) {
-        const rect = containerRef.current.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-        setPosition({ x, y });
-      }
-    };
-
-    if (isVisible) {
-      containerRef.current?.addEventListener("mousemove", handleMouseMove);
-    }
-
-    return () => {
-      containerRef.current?.removeEventListener("mousemove", handleMouseMove);
-    };
-  }, [isVisible, containerRef, fixedPosition]);
-    */
+          };
+      
+          const handleMouseOut = (container) => {
+            container.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
+          };
+      
+          containersRef.current.forEach((container) => {
+            if (container) {
+              const mouseMoveListener = (e) => handleMouseMove(e, container);
+              const mouseOutListener = () => handleMouseOut(container);
+      
+              container.addEventListener('mousemove', mouseMoveListener);
+              container.addEventListener('mouseout', mouseOutListener);
+      
+              return () => {
+                container.removeEventListener('mousemove', mouseMoveListener);
+                container.removeEventListener('mouseout', mouseOutListener);
+              };
+            }
+          });
+        }, []);
 
     
   return (
@@ -269,7 +254,7 @@ const Nintendo = () => {
                                             </Link>
                                         </li>
                                         <li className="gNav-body-elements">
-                                            <Link href="https://www.nintendo.co.kr/news/article/remlisq669gw78ScpkyFj">
+                                            <Link to="https://www.nintendo.co.kr/news/article/remlisq669gw78ScpkyFj">
                                                 <img src="../image/header/topics_banner_1-100.jpg" style={{width:"226.41px", height:"127.34px"}} />
                                                 <p>「Nintendo Switch Online」의 7일간 무료 체험을 배포! 『마리오 카트 8 디럭스』 온라인 대회에도 참가하고, 다양한 온라인 서비스도 이용할 수 있어요!</p>
                                                 <p className="status">
@@ -280,7 +265,7 @@ const Nintendo = () => {
                                             </Link>
                                         </li>
                                         <li className="gNav-body-elements">
-                                            <Link href="https://www.nintendo.co.kr/news/article/2jrFOAkgCTYwUKVfxRykfe">
+                                            <Link to="https://www.nintendo.co.kr/news/article/2jrFOAkgCTYwUKVfxRykfe">
                                                 <img src="../image/header/topics_banner_820_461.jpg" style={{width: "226.41px", height:"127.34px"}} />
                                                 <p>Joy-Con을 간편하게 충전. 「Joy-Con 충전 스탠드(2way)」가 10월 17일(목)에 발매됩니다. </p>
                                                 <p className="status">
@@ -291,7 +276,7 @@ const Nintendo = () => {
                                             </Link>
                                         </li>
                                         <li className="gNav-body-elements">
-                                            <Link href="https://www.nintendo.co.kr/news/article/3aDvepeZCCcuSf3XBSBOlM">
+                                            <Link to="https://www.nintendo.co.kr/news/article/3aDvepeZCCcuSf3XBSBOlM">
                                                 <img src="../image/header/topics_banner_320x180.jpg" style={{width:"226.41px",height:"127.34px"}} />
                                                 <p>『페이퍼 마리오 1000년의 문』의 모험에 도움을 주는 힌트 등이 적힌 「페이퍼 북」을 공개했습니다.</p>
                                                 <p className="status">
@@ -304,18 +289,18 @@ const Nintendo = () => {
                                     </ul>
                                 </div>
                                 <div className="gNav-body-bottom">
-                                    <Link href="">News 목록</Link>
+                                    <Link to="">News 목록</Link>
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <Link href="https://www.nintendo.co.kr/support/index.html">
+                        <Link to="https://www.nintendo.co.kr/support/index.html">
                             <p>고객지원</p>
                         </Link>
                     </li>
                     <li>
-                        <Link href="https://store.nintendo.co.kr/">
+                        <Link to="https://store.nintendo.co.kr/">
                             <p>온라인 스토어</p>
                         </Link>
                     </li>
@@ -363,7 +348,8 @@ const Nintendo = () => {
             <h3 className="new-game-title">NEW GAME</h3>
             <ul className="new-game-list">
                 <li className="contents">
-                    <div className="container">
+                    <div className="container"
+                    ref={(el) => containersRef.current[0] = el}>
                         <div className="card"></div>
                     </div>
                     <div className="new-game-text">
@@ -372,7 +358,8 @@ const Nintendo = () => {
                     </div> 
                 </li>
                 <li className="contents">
-                    <div className="container">
+                    <div className="container"
+                    ref={(el) => containersRef.current[1] = el}>
                         <div className="card"></div>
                     </div>
                     <div className="new-game-text">
@@ -381,7 +368,8 @@ const Nintendo = () => {
                     </div>
                 </li>
                 <li className="contents">
-                    <div className="container">
+                    <div className="container"
+                    ref={(el) => containersRef.current[2] = el}>
                         <div className="card"></div>
                     </div>
                     <div className="new-game-text">
@@ -390,7 +378,8 @@ const Nintendo = () => {
                     </div>
                 </li>
                 <li className="contents">
-                    <div className="container">
+                    <div className="container"
+                    ref={(el) => containersRef.current[3] = el}>
                         <div className="card"></div>
                     </div>
                     <div className="new-game-text">
@@ -574,7 +563,7 @@ const Nintendo = () => {
     <section className="bottom" style={{width: "100%"}}>
         <div id="bottom">
             <div className="bottom-logo">
-                <Link href="index.html" className="logo"></Link>
+                <Link to="index.html" className="logo"></Link>
             </div>
             <div className="bottom-menu-wrapper">
                 <div className="bottom-menu">
@@ -583,10 +572,10 @@ const Nintendo = () => {
                             <h3>본체 / amiibo</h3>
                             <ul>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/hardware/index.html">Nintendo Switch</Link>
+                                    <Link to="https://www.nintendo.co.kr/hardware/index.html">Nintendo Switch</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/amiibo/index.html">amiibo</Link>
+                                    <Link to="https://www.nintendo.co.kr/amiibo/index.html">amiibo</Link>
                                 </li>
                             </ul>
                         </li>
@@ -594,13 +583,13 @@ const Nintendo = () => {
                             <h3>소프트웨어</h3>
                             <ul>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/software/switch">Nintendo Switch 소프트웨어</Link>
+                                    <Link to="https://www.nintendo.co.kr/software/switch">Nintendo Switch 소프트웨어</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/schedule">소프트웨어 발매 스케쥴</Link>
+                                    <Link to="https://www.nintendo.co.kr/schedule">소프트웨어 발매 스케쥴</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/software/smartphone/">스마트폰용 앱</Link>
+                                    <Link to="https://www.nintendo.co.kr/software/smartphone/">스마트폰용 앱</Link>
                                 </li>
                             </ul>
                         </li>
@@ -608,13 +597,13 @@ const Nintendo = () => {
                             <h3>고객지원</h3>
                             <ul>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/support/switch/index.html">Nintendo Switch</Link>
+                                    <Link to="https://www.nintendo.co.kr/support/switch/index.html">Nintendo Switch</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/3DS/customer/index.html">Nintendo 3DS</Link>
+                                    <Link to="https://www.nintendo.co.kr/3DS/customer/index.html">Nintendo 3DS</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://support-kr.nintendo.com/hc/ko/requests/new">온라인 고객 상담</Link>
+                                    <Link to="https://support-kr.nintendo.com/hc/ko/requests/new">온라인 고객 상담</Link>
                                 </li>
                             </ul>
                         </li>
@@ -622,10 +611,10 @@ const Nintendo = () => {
                             <h3>한국닌텐도</h3>
                             <ul>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/corporate/kr/kr01.html">회사개요</Link>
+                                    <Link to="https://www.nintendo.co.kr/corporate/kr/kr01.html">회사개요</Link>
                                 </li>
                                 <li>
-                                    <Link href="https://www.nintendo.co.kr/corporate/kr/kr04.html">찾아오시는 길</Link>
+                                    <Link to="https://www.nintendo.co.kr/corporate/kr/kr04.html">찾아오시는 길</Link>
                                 </li>
                             </ul>
                         </li>
@@ -635,27 +624,27 @@ const Nintendo = () => {
                     <div className="bottom-sns">
                         <ul>
                             <li>
-                                <Link href="https://www.youtube.com/@Nintendo_KR">
+                                <Link to="https://www.youtube.com/@Nintendo_KR">
                                     <img src="image/bottom/youtube.png" />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://story.kakao.com/ch/nintendokorea">
+                                <Link to="https://story.kakao.com/ch/nintendokorea">
                                     <img src="image/bottom/kakaostory.png" />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://www.facebook.com/Nintendo.kr">
+                                <Link to="https://www.facebook.com/Nintendo.kr">
                                     <img src="image/bottom/facebook.png" />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://x.com/Nintendo_Korea">
+                                <Link to="https://x.com/Nintendo_Korea">
                                     <img src="image/bottom/x.png" />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://pf.kakao.com/_Xxiwzxj">
+                                <Link to="https://pf.kakao.com/_Xxiwzxj">
                                     <img src="image/bottom/channel.png" />
                                 </Link>
                             </li>
@@ -664,12 +653,12 @@ const Nintendo = () => {
                     <div className="bottom-service">
                         <ul>
                             <li>
-                                <Link href="https://www.nintendo.co.kr/amiibo">
+                                <Link to="https://www.nintendo.co.kr/amiibo">
                                     <img src="image/bottom/amiibo.png" />
                                 </Link>
                             </li>
                             <li>
-                                <Link href="https://my.nintendo.com">
+                                <Link to="https://my.nintendo.com">
                                     <img src="image/bottom/myNintendo.png" />
                                 </Link>
                             </li>
@@ -682,7 +671,7 @@ const Nintendo = () => {
 
     <footer className="footer" style={{width: "100%"}}>
         <div id="footer">
-            <p><Link href="https://www.nintendo.co.kr/common/account.html">이용약관</Link>| 개인정보처리방침</p>
+            <p><Link to="https://www.nintendo.co.kr/common/account.html">이용약관</Link>| 개인정보처리방침</p>
             <p>고객지원 문의전화 : 1670-9900 (평일 오전 9시 30분~오후 5시 30분)</p>
             <p>※토/일/공휴일/회사 정기휴일 및 특별휴일 제외</p>
             <p>ⓒ 2006 Nintendo of Korea Co., Ltd. All Rights Reserved.</p>
