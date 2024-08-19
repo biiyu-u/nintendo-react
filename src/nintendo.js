@@ -69,7 +69,7 @@ const Nintendo = () => {
   return (
     <>
     <div className="header" style={{width:"100%"}}>
-        <div className="inner" style={{width:'1200px', margin:'0 auto',padding:'30px'}}>
+        <div className="inner" style={{width:'1200px', margin:'0 auto'}}>
             <div className="">
                 <Link to="index.html" className="logo"></Link>
             </div>
@@ -297,12 +297,12 @@ const Nintendo = () => {
                             </div>
                         </div>
                     </li>
-                    <li>
+                    <li className="support">
                         <Link to="https://www.nintendo.co.kr/support/index.html">
                             <p>고객지원</p>
                         </Link>
                     </li>
-                    <li>
+                    <li className="online-store">
                         <Link to="https://store.nintendo.co.kr/">
                             <p>온라인 스토어</p>
                         </Link>

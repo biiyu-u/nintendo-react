@@ -64,15 +64,30 @@ body {
     height: 37px;
     background: url(../public/image/header/logo.png) no-repeat center center;
     background-size: 150px 37px;
+    padding: 37px 0px 37px 0px;
 }
 .header .gnb{
-    display: block;
     display: flex;
     align-items: center;
 }
 .header .gnb .menu{
     display: flex;
     gap: 65px;
+}
+.dropdown-hardware{
+    padding: 37px 0px 37px 0px;
+}
+.dropdown-software{
+    padding: 37px 0px 37px 0px;
+}
+.dropdown-topic{
+    padding: 37px 0px 37px 0px;
+}
+.support{
+    padding: 37px 0px 37px 0px;
+}
+.online-store{
+    padding: 37px 0px 37px 0px;
 }
 .menu p {
     color: black;
@@ -994,6 +1009,9 @@ body {
     .visual {
         background-image: none;
     }
+    .bg-orange{
+        display: none;
+    }
     
     /*******  [ Sec 02 ]  ********/
     #best-game{
@@ -1337,7 +1355,6 @@ body{
 .inner{
     width: 100%;
     display: block;
-    padding: 0px !important;
 }
 .header{
     background-color: #dc0213;
@@ -1357,6 +1374,24 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.logo {
+    padding: 0px;
+}
+.dropdown-hardware{
+    padding: 0px;
+}
+.dropdown-software{
+    padding: 0px;
+}
+.dropdown-topic{
+    padding: 0px;
+}
+.support{
+    padding: 0px;
+}
+.online-store{
+    padding: 0px;
+}
 .gNav-megadrop{
     border-top: 3px solid #fff;
 }
@@ -1371,9 +1406,6 @@ body{
 .visual{
     height: auto;
     overflow: hidden;
-}
-.bg-orange{
-    width: 100%;
 }
 
 
