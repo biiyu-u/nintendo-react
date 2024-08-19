@@ -2,6 +2,16 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 const Nintendo = () => {
+    // 드롭다운
+        const [openDropdown, setOpenDropdown] = useState(null);
+      
+        const closeAllDropdowns = () => {
+          setOpenDropdown(null);
+        };
+      
+        const handleMouseEnter = (dropdown) => {
+          setOpenDropdown(dropdown);
+        };
     //[ Sec 01 ]
         const slideWidth = 744;
         const [currentPosition, setCurrentPosition] = useState(0);
@@ -22,65 +32,23 @@ const Nintendo = () => {
             setCurrentPosition(newPosition);
         }
 
+    //[ Sec 03 ]
+    let container = document.querySelectorAll('.new-game-list .contents .container');
 
-//드롭다운
-// $(document).ready(function() {
-//   function closeAllDropdowns() {
-//       $('.gNav-megadrop').stop().animate({'height': '0px'});
-//       $('.gNav-contentItem').stop().fadeOut();
-//   }
-
-//   function setupDropdown(menuClass, contentClass, height) {
-//       $(menuClass).on('mouseenter', function() {
-//           closeAllDropdowns();
-//           $(this).find(contentClass).stop().fadeIn();
-//           $(this).find('.gNav-megadrop').stop().animate({'height': height});
-//       });
-
-//       $(menuClass).on('mouseleave', function() {
-//           var hoverNav = $(this).find('.gNav-megadrop');
-//           hoverNav.on('mouseleave', function() {
-//               $(this).stop().animate({'height': '0px'});
-//               $(this).find(contentClass).stop().fadeOut();
-//           });
-//       });
-
-//       $('.gNav-megadrop').on('mouseleave', function() {
-//           $(this).stop().animate({'height': '0px'});
-//           $(this).find(contentClass).stop().fadeOut();
-//       });
-//   }
-
-//   setupDropdown('.dropdown-hardware', '.hardware', '276.31px');
-//   setupDropdown('.dropdown-software', '.software', '278.91px');
-//   setupDropdown('.dropdown-topic', '.topic', '371.34px');
-
-//   $('.menu > li:not(.dropdown-hardware, .dropdown-software, .dropdown-topic)').on('mouseenter', function() {
-//       closeAllDropdowns();
-//   });
-// });
-
-
-//[ Sec 03 ]
-// let container = document.querySelectorAll('.new-game-list .contents .container');
-
-// container.forEach(container => {
-//   container.addEventListener('mousemove', function(e){
-//     let x = e.offsetX;
-//     let y = e.offsetY;
-//     let rotateY = -((x / container.clientWidth) * 2 - 1) * 20;
-//     let rotateX = (((y / container.clientHeight) * 2 - 1) * 20);
+    container.forEach(container => {
+        container.addEventListener('mousemove', function(e){
+            let x = e.offsetX;
+            let y = e.offsetY;
+            let rotateY = -((x / container.clientWidth) * 2 - 1) * 20;
+            let rotateX = (((y / container.clientHeight) * 2 - 1) * 20);
     
-//     // overlay.style = `background-position : ${x/20 + y/20}%`;
-//     // filter : opacity(${x/500}) brightness(1.2)`;
-//     container.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-//   });
+            container.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
   
-//   container.addEventListener('mouseout', function(){
-//     // overlay.style = 'filter : opacity(0)';
-//     container.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
-//   });
-// });
+    container.addEventListener('mouseout', function(){
+        container.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
+        });
+    });
 
     
   return (
@@ -92,19 +60,29 @@ const Nintendo = () => {
             </div>
             <nav className="gnb">
                 <ul className="menu">
-                    <li className="dropdown-hardware">
+                    <li className="dropdown-hardware"
+                    onMouseEnter={() => handleMouseEnter('hardware')}
+                    onMouseLeave={closeAllDropdowns}>
                         <p>본체 및 amiibo</p>
-                        <div className="gNav-megadrop" style={{height:"0px",overflow:"hidden"}}>
-                            <div className="gNav-contentItem hardware" style={{display: "none"}}>
+                        <div className="gNav-megadrop"
+                        style={{
+                            height: openDropdown === 'hardware' ? 'auto' : '0px',
+                            overflow: 'hidden',
+                            transition: 'height 0.5s'
+                          }}>
+                            <div className="gNav-contentItem hardware"
+                            style={{
+                                display: openDropdown === 'hardware' ? 'block' : 'none',
+                              }}>
                                 <div className="gNav-body">
                                     <div className="gNav-body-upper">
-                                        <Link href="https://www.nintendo.co.kr/hardware/">
+                                        <Link to="https://www.nintendo.co.kr/hardware/">
                                             <img src="image/header/nav_switch_family.png" />
                                         </Link>
                                     </div>
                                     <div className="gNav-body-bottom">
                                         <div className="gNav-body-item amiibo">
-                                            <Link href="https://www.nintendo.co.kr/amiibo/">
+                                            <Link to="https://www.nintendo.co.kr/amiibo/">
                                                 <p className="thumb">
                                                     <img src="image/header/img_amiibo.jpg" />
                                                 </p>
@@ -112,7 +90,7 @@ const Nintendo = () => {
                                             </Link>
                                         </div>
                                         <div className="gNav-body-item gamewatch">
-                                            <Link href="https://www.nintendo.co.kr/hardware/gamewatch/zelda/">
+                                            <Link to="https://www.nintendo.co.kr/hardware/gamewatch/zelda/">
                                                 <p className="thumb">
                                                     <img src="image/header/img_gamewatch.jpg" />
                                                 </p>
@@ -120,7 +98,7 @@ const Nintendo = () => {
                                             </Link>
                                         </div>
                                         <div className="gNav-body-item amiibo">
-                                            <Link href="https://www.pokemongoplusplus.com/ko/">
+                                            <Link to="https://www.pokemongoplusplus.com/ko/">
                                                 <p className="thumb">
                                                     <img src="image/header/img_pokemongoplusplus.jpg" />
                                                 </p>
@@ -129,12 +107,12 @@ const Nintendo = () => {
                                         </div>
                                         <ul className="gNav-body-list">
                                             <li className="gNav-body-elements">
-                                                <Link href="https://www.nintendo.co.kr/hardware/switch/compare/">
+                                                <Link to="https://www.nintendo.co.kr/hardware/switch/compare/">
                                                     기능ㆍ특징을 비교
                                                 </Link>
                                             </li>
                                             <li className="gNav-body-elements">
-                                                <Link href="https://www.nintendo.co.kr/hardware/switch/accessories/">
+                                                <Link to="https://www.nintendo.co.kr/hardware/switch/accessories/">
                                                     주변기기
                                                 </Link>
                                             </li>
@@ -144,15 +122,25 @@ const Nintendo = () => {
                             </div>
                         </div>
                     </li>
-                    <li className="dropdown-software">
+                    <li className="dropdown-software"
+                    onMouseEnter={() => handleMouseEnter('software')}
+                    onMouseLeave={closeAllDropdowns}>
                         <p>소프트웨어</p>
-                        <div className="gNav-megadrop" style={{height:"0px", overflow:"hidden"}}>
-                            <div className="gNav-contentItem software" style={{display:"none"}}>
+                        <div className="gNav-megadrop"
+                        style={{
+                            height: openDropdown === 'software' ? 'auto' : '0px',
+                            overflow: 'hidden',
+                            transition: 'height 0.5s'
+                          }}>
+                            <div className="gNav-contentItem software"
+                            style={{
+                                display: openDropdown === 'software' ? 'block' : 'none',
+                              }}>
                                 <div className="gNav-body">
                                     <div className="gNav-body-upper">
                                     <ul className="gNav-body-list">
                                     <li className="gNav-body-elements-switch">
-                                        <Link href="https://www.nintendo.co.kr/software/switch" className="gNav-body-link">
+                                        <Link to="https://www.nintendo.co.kr/software/switch" className="gNav-body-link">
                                             <div className="gNav-body-icon">
                                                 <img src="image/header/nav_nintendo_logo.png" style={{width:"48.25px",height:"52.63px;"}}/>
                                                 <p>Nintendo Switch</p>
@@ -173,7 +161,7 @@ const Nintendo = () => {
                                         </Link>
                                     </li>
                                     <li className="gNav-body-elements-smartphone">
-                                        <Link href="https://www.nintendo.co.kr/software/smartphone/" className="gNav-body-link">
+                                        <Link to="https://www.nintendo.co.kr/software/smartphone/" className="gNav-body-link">
                                             <div className="gNav-body-icon">
                                                 <img src="image/header/nav_smartphone_icon.png" style={{width:"33.95px", height:"60px"}} />
                                                 <p>스마트폰용 앱</p>
@@ -192,18 +180,18 @@ const Nintendo = () => {
                                 </ul>
                             </div>
                             <div className="gNav-body-bottom">
-                                <Link href="https://store.nintendo.co.kr/nintendo-switch-online" className="thumb-online">
+                                <Link to="https://store.nintendo.co.kr/nintendo-switch-online" className="thumb-online">
                                     <img src="../image/header/nintendo_online.png" style={{width: "112px", height: "38px"}} />
                                     <p className="text">Nintendo Switch Online</p>
                                 </Link>
                                 <ul className="gNav-body-list">
                                     <li className="gNav-body-elements">
-                                        <Link href="https://www.nintendo.co.kr/software/switch?sftab=trial#section-now-on-sale">
+                                        <Link to="https://www.nintendo.co.kr/software/switch?sftab=trial#section-now-on-sale">
                                             체험판을 즐길 수 있는 소프트웨어
                                         </Link>
                                     </li>
                                     <li className="gNav-body-elements">
-                                        <Link href="https://www.nintendo.co.kr/schedule">
+                                        <Link to="https://www.nintendo.co.kr/schedule">
                                             소프트웨어 발매 스케줄
                                         </Link>
                                     </li>
@@ -213,14 +201,23 @@ const Nintendo = () => {
                             </div>
                         </div>
                     </li>
-                    <li className="dropdown-topic">
+                    <li className="dropdown-topic"
+                    onMouseEnter={() => handleMouseEnter('topic')}
+                    onMouseLeave={closeAllDropdowns}>
                         <p>뉴스 & 업데이트</p>
-                        <div className="gNav-megadrop" style={{height:"0px", overflow:"hidden"}}>
-                            <div className="gNav-contentItem topic" style={{display: "none"}}>
+                        <div className="gNav-megadrop"
+                        style={{
+                            height: openDropdown === 'topic' ? 'auto' : '0px',
+                            overflow: 'hidden',
+                            transition: 'height 0.5s'
+                          }}>
+                            <div className="gNav-contentItem topic"
+                            style={{
+                                display: openDropdown === 'topic' ? 'block' : 'none',}}>
                                 <div className="gNav-body">
                                     <ul className="gNav-body-list">
                                         <li className="gNav-body-elements">
-                                            <Link href="https://www.nintendo.co.kr/news/article/49030zqZcq32ZNizHvv3zA">
+                                            <Link to="https://www.nintendo.co.kr/news/article/49030zqZcq32ZNizHvv3zA">
                                                 <img src="../image/header/topics_banner_240613.jpg" style={{width:"226.41px", height:"127.34px"}} />
                                                 <p>다 함께 신나게 즐길 수 있는 Nintendo Switch 파티 게임을 소개합니다.</p>
                                                 <p className="status">
@@ -231,7 +228,7 @@ const Nintendo = () => {
                                             </Link>
                                         </li>
                                         <li className="gNav-body-elements">
-                                            <Link href="https://www.nintendo.co.kr/news/article/28Jp71IrjDw2IDGvAtOiYh">
+                                            <Link to="https://www.nintendo.co.kr/news/article/28Jp71IrjDw2IDGvAtOiYh">
                                                 <img src="../image/header/topics_banner_240723.jpg" style={{width:"226.41px",height:"127.34px"}} />
                                                 <p>「모여봐요 동물의 숲 × 코엑스 아쿠아리움」 7월 29일(월) 오픈!</p>
                                                 <p className="status">
