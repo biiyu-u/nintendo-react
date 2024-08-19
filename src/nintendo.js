@@ -81,10 +81,11 @@ const Nintendo = () => {
                         <p>본체 및 amiibo</p>
                         <div className="gNav-megadrop"
                         style={{
-                            height: openDropdown === 'hardware' ? 'auto' : '0px',
-                            overflow: 'hidden',
-                            transition: 'height 0.5s'
-                          }}>
+                            height: openDropdown === 'hardware' ? '276.31px' : '0px',
+                            overflow: openDropdown === 'hardware' ? 'hidden' : 'hidden',
+                            opacity: openDropdown === 'hardware' ? 1 : 0,
+                            transition: 'height 0.5s ease, opacity 0.5s ease',
+                        }}>
                             <div className="gNav-contentItem hardware"
                             style={{
                                 display: openDropdown === 'hardware' ? 'block' : 'none',
@@ -143,10 +144,11 @@ const Nintendo = () => {
                         <p>소프트웨어</p>
                         <div className="gNav-megadrop"
                         style={{
-                            height: openDropdown === 'software' ? 'auto' : '0px',
-                            overflow: 'hidden',
-                            transition: 'height 0.5s'
-                          }}>
+                            height: openDropdown === 'software' ? '278.91px' : '0px',
+                            overflow: openDropdown === 'software' ? 'hidden' : 'hidden',
+                            opacity: openDropdown === 'software' ? 1 : 0,
+                            transition: 'height 0.5s ease, opacity 0.5s ease',
+                        }}>
                             <div className="gNav-contentItem software"
                             style={{
                                 display: openDropdown === 'software' ? 'block' : 'none',
@@ -222,10 +224,11 @@ const Nintendo = () => {
                         <p>뉴스 & 업데이트</p>
                         <div className="gNav-megadrop"
                         style={{
-                            height: openDropdown === 'topic' ? 'auto' : '0px',
-                            overflow: 'hidden',
-                            transition: 'height 0.5s'
-                          }}>
+                            height: openDropdown === 'topic' ? '371.34px' : '0px',
+                            overflow: openDropdown === 'topic' ? 'hidden' : 'hidden',
+                            opacity: openDropdown === 'topic' ? 1 : 0,
+                            transition: 'height 0.5s ease, opacity 0.5s ease',
+                        }}>
                             <div className="gNav-contentItem topic"
                             style={{
                                 display: openDropdown === 'topic' ? 'block' : 'none',}}>
