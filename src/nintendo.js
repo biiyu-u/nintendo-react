@@ -33,8 +33,10 @@ const Nintendo = () => {
         }
 
     //[ Sec 03 ]
+    // useRef
     let container = document.querySelectorAll('.new-game-list .contents .container');
 
+    // useEffect
     container.forEach(container => {
         container.addEventListener('mousemove', function(e){
             let x = e.offsetX;
@@ -45,10 +47,38 @@ const Nintendo = () => {
             container.style.transform = `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
         });
   
+    
+
     container.addEventListener('mouseout', function(){
         container.style.transform = 'perspective(700px) rotateX(0deg) rotateY(0deg)';
         });
     });
+
+    /*
+    useEffect(() => {
+    if (fixedPosition) {
+      setPosition(fixedPosition);
+      return;
+    }
+
+    const handleMouseMove = (event: MouseEvent) => {
+      if (containerRef.current && tooltipRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        setPosition({ x, y });
+      }
+    };
+
+    if (isVisible) {
+      containerRef.current?.addEventListener("mousemove", handleMouseMove);
+    }
+
+    return () => {
+      containerRef.current?.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, [isVisible, containerRef, fixedPosition]);
+    */
 
     
   return (
