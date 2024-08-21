@@ -67,42 +67,73 @@ const Nintendo = () => {
           });
         }, []);
 
-        //[ Sec 04 ]
-        // gsap.registerPlugin(ScrollTrigger);
-        // const sectionsRef = useRef([]);
-        
-        // useEffect(() => {
-        //     sectionsRef.current.forEach((section, i) => {
-        //         ScrollTrigger.create({
-        //             trigger:section,
-        //             start:'0% 20%',
-        //             pin:true,
-        //             /*
-        //                 1.핀 고정 시 공간 처리:
-        //                 false로 설정하면 핀으로 고정된 요소가 차지하는 공간을 제거합니다.
-        //                 즉, 스크롤 시 다음 섹션이 바로 위로 올라오게 됩니다.
-        //                 2.연속적인 스크롤 효과:
-        //                 각 섹션이 서로 붙어있는 듯한 효과를 만들어냅니다.
-        //                 사용자가 스크롤할 때 부드럽게 다음 섹션으로 전환되는 느낌을 줍니다.
-        //                 3. 레이아웃 영향:
-        //                 핀 고정된 요소 아래의 콘텐츠가 자연스럽게 흐르도록 합니다.
-        //                 페이지 전체 길이에 영향을 주어 스크롤 동작을 더 예측 가능하게 만듭니다.
-        //                 이 설정은 특히 전체 화면 섹션을 순차적으로 보여주는 디자인에 효과적입니다. 각 섹션이 화면에 꽉 차게 표시되고, 스크롤 시 다음 섹션이 부드럽게 나타나는 효과를 만들 수 있습니다.
-        //             */
-        //             pinSpacing:false,
-        //             markers:true,
-        //         })
-        //         // ScrollTrigger.create({
-        //         //     snap : 1 / (section.length - 1) // 탑에 좀 더 달라붙는다는데 잘 모르겠음
-        //         // })
-        //     })
-        // }, []);
+    //[ Sec 04 ]
+        gsap.registerPlugin(ScrollTrigger);
+          
+        const imgRef = useRef(null);
+        const logoRef = useRef(null);
+        const scrollTriggerRef = useRef(null);
 
-        // gsap.registerPlugin(ScrollTrigger);
-        // const sectionsRef = useRef([]);
+        useEffect(() => {
+            if (imgRef.current && logoRef.current) {
+                const images = [
+                    "../image/Sec04/nintendo_OLED.png",
+                    "../image/Sec04/nintendo_splatoon.png",
+                    "../image/Sec04/nintendo_zelda.png"
+                ];
 
-        // useEffect(() => {
-        // }, []);
+            let currentIndex = 0;
+            const fadeOut = (element, onComplete) => {
+                gsap.to(element, {
+                    duration: 0.3,
+                    opacity: 0.3,
+                    onComplete: onComplete,
+                });
+            };
+    
+            const fadeIn = (element) => {
+                gsap.to(element, {
+                    duration: 0.3,
+                    opacity: 1,
+                });
+            };
+
+        scrollTriggerRef.current = ScrollTrigger.create({
+            trigger: "#online",
+            start: "top 22%",
+            end: "bottom+=500px top",
+            pin: "#online",
+            onUpdate: (self) => {
+                if (imgRef.current) {
+                    let newIndex;
+                    if (self.progress > 0.66) {
+                        newIndex = 2;
+                    } else if (self.progress > 0.33) {
+                        newIndex = 1;
+                    } else {
+                        newIndex = 0;
+                    }
+
+                    if (newIndex !== currentIndex) {
+                        fadeOut(imgRef.current, () => {
+                            currentIndex = newIndex;
+                            imgRef.current.src = images[currentIndex];
+                            fadeIn(imgRef.current);
+                        });
+                    }
+                }
+            },
+            scrub: true,
+        });
+    }
+
+            return () => {
+                if (scrollTriggerRef.current) {
+                    scrollTriggerRef.current.kill();
+                }
+            };
+        }, []);
+
 
     
   return (
@@ -435,10 +466,8 @@ const Nintendo = () => {
 
     <section className="online" style={{width:"100%", position: "relative"}}>
         <div id="online">
-            <div className="online-logo"></div>
-            <img ref={el => sectionsRef.current[0] = el} className="OLED" src="../image/Sec04/nintendo_OLED.png"/>
-            <img ref={el => sectionsRef.current[1] = el} className="OLED" src="../image/Sec04/nintendo_splatoon.png"/>
-            <img ref={el => sectionsRef.current[2] = el} className="OLED" src="../image/Sec04/nintendo_zelda.png"/>
+            <img ref={logoRef} className="online-logo" src="../image/Sec04/online_logo.png"/>
+            <img ref={imgRef} className="OLED" src="../image/Sec04/nintendo_OLED.png"/>
         </div>
         <img className="bg-star" src="image/Sec04/bg_star.png" alt="날고있는 별 이미지" />
     </section>
