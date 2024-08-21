@@ -76,13 +76,34 @@ const Nintendo = () => {
 
         useEffect(() => {
             if (imgRef.current && logoRef.current) {
-                const images = [
+                let images = [
                     "../image/Sec04/nintendo_OLED.png",
                     "../image/Sec04/nintendo_splatoon.png",
                     "../image/Sec04/nintendo_zelda.png"
                 ];
+            // 768px 이하
+            const mobileImages = [
+                "../image/Sec04/nintendo_OLED_768.png",
+                "../image/Sec04/nintendo_splatoon_768.png",
+                "../image/Sec04/nintendo_zelda_768.png"
+            ];
+
+            const updateImagesForScreenSize = () => {
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    images = mobileImages;
+                } else {
+                    images = [
+                        "../image/Sec04/nintendo_OLED.png",
+                        "../image/Sec04/nintendo_splatoon.png",
+                        "../image/Sec04/nintendo_zelda.png"
+                    ];
+                }
+            };
+            updateImagesForScreenSize();
+            window.addEventListener("resize", updateImagesForScreenSize);
 
             let currentIndex = 0;
+            
             const fadeOut = (element, onComplete) => {
                 gsap.to(element, {
                     duration: 0.3,

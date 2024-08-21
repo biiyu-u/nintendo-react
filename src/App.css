@@ -1502,7 +1502,6 @@ body{
  }
 /*******  [ Sec 04 ]  ********/
 .OLED{
-    background-image: url(../public/image/Sec04/nintendo_OLED_768.png);
     aspect-ratio: 541 / 477;
     width: 50%; height: auto;
 }
