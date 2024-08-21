@@ -98,11 +98,11 @@ const Nintendo = () => {
         //     })
         // }, []);
 
-        gsap.registerPlugin(ScrollTrigger);
-        const sectionsRef = useRef([]);
+        // gsap.registerPlugin(ScrollTrigger);
+        // const sectionsRef = useRef([]);
 
-        useEffect(() => {
-        }, []);
+        // useEffect(() => {
+        // }, []);
 
     
   return (
