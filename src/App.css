@@ -281,7 +281,6 @@ body {
     top: -197px;
     aspect-ratio: 744 / 418;
 }
-/* 1200px이하로 */
 .nintendo::before{
     content: '';
     display: block;
@@ -976,6 +975,8 @@ body {
     }
 
     .nintendo-slide {
+        display: none;
+
         position: absolute;
         top: 50px;
         width: 100%;
