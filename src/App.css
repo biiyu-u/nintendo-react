@@ -1097,8 +1097,7 @@ body {
     .bg-star {
         width: 225px; height: auto;
         aspect-ratio: 250/254;
-    
-        bottom:-2550px; right: 15%;
+        right: 3%;
         z-index: 2;
     
         opacity: 0.5;
@@ -1512,8 +1511,8 @@ body{
     width: 200px; height: auto;
     aspect-ratio: 250/254;
 
-    bottom:-1900px; right: 7%;
-    z-index: 2;
+    bottom:1000px; right: 7%;
+    z-index: -997;
 
     opacity: 0.5;
 }
