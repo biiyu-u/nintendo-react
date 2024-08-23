@@ -3,6 +3,7 @@ import styles from "./index.module.scss";
 import { throttle } from "lodash";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import clsx from "clsx";
+import TeamTag from './components/TeamTag/index'
 
 export default function Plus(props) {
   const bgChangeRef = useRef();
@@ -143,7 +144,7 @@ export default function Plus(props) {
   }, [isMouseDown]);
 
   return (
-    <motion.section
+    <motion.section style={{overflow:'hidden'}}
       onMouseMove={(e) => {
         setAcitve(true);
         if (bgChange) {
@@ -162,7 +163,6 @@ export default function Plus(props) {
         <div
           className={clsx(styles.slideContainer)}
           ref={scrollRef}
-          style={{ perspective: translateZ * 2 + "px" }}
         >
           <motion.ul
             className={clsx(styles.slideWrap)}
@@ -217,7 +217,7 @@ export default function Plus(props) {
           </motion.ul>
         </div>
 
-        {/* <TeamTag tag={tag} mousePosition={mousePosition} teamIdx={teamName} /> */}
+        <TeamTag tag={tag} mousePosition={mousePosition} teamIdx={teamName} />
       </div>
     </motion.section>
   );
