@@ -217,7 +217,7 @@ export default function Plus(props) {
           </motion.ul>
         </div>
 
-        <TeamTag tag={tag} mousePosition={mousePosition} teamIdx={teamName} />
+        {/* <TeamTag tag={tag} mousePosition={mousePosition} teamIdx={teamName} /> */}
       </div>
     </motion.section>
   );
