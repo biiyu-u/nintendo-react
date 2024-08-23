@@ -59,15 +59,15 @@ const Online = () => {
     scrollTriggerRef.current = ScrollTrigger.create({
         trigger: "#online",
         start: "top 20%",
-        end: "bottom+=1500px top",
+        end: "bottom+=2500px top",
         pin: "#online",
-        markers: true,
+        // markers: true,
         onUpdate: (self) => {
             if (imgRef.current) {
                 let newIndex;
-                if (self.progress > 0.9) {
+                if (self.progress > 0.66) {
                     newIndex = 2;
-                } else if (self.progress > 0.5) {
+                } else if (self.progress > 0.33) {
                     newIndex = 1;
                 } else {
                     newIndex = 0;
