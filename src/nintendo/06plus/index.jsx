@@ -159,10 +159,12 @@ export default function Plus(props) {
       }}
       ref={bgChangeRef}
     >
+      <h3 className={styles.plusText}>추가 팩 가입 시</h3>
       <div className={styles.slideBox} ref={slideBoxRef}>
         <div
           className={clsx(styles.slideContainer)}
           ref={scrollRef}
+          style={{ perspective: translateZ * 1.98 + "px" }}
         >
           <motion.ul
             className={clsx(styles.slideWrap)}

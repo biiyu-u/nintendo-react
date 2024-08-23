@@ -25,6 +25,15 @@
 .plusImg{
   margin: 0 auto;
 }
+.plusText {
+  color: white;
+    font-size: 4rem;
+    text-align: center;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 .slideBox {
   padding: 500px 0 500px;
   .slideContainer {
@@ -32,7 +41,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-    perspective: 1970px;
+    perspective: 1900px;
     cursor: ew-resize;
     z-index: 1;
     transform: rotate(6deg);
