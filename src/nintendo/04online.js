@@ -106,4 +106,4 @@ const Online = () => {
   )
 }
 
-export default Online
+export default Online;

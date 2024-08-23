@@ -12,9 +12,10 @@ const Footer = () => {
             <p>ⓒ 2006 Nintendo of Korea Co., Ltd. All Rights Reserved.</p>
             <p>상호명 : 한국닌텐도주식회사 대표자명 : 미우라 타카히로 사업자등록번호 : 120-87-03578</p>
         </div>
+        <div>a</div>
     </footer>
     </>
   )
 }
 
-export default Footer
+export default Footer;

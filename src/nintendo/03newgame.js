@@ -97,4 +97,4 @@ const Newgame = () => {
   )
 }
 
-export default Newgame
+export default Newgame;

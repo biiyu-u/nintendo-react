@@ -50,4 +50,4 @@ const Plan = () => {
   )
 }
 
-export default Plan
+export default Plan;
