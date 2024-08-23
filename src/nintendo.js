@@ -166,80 +166,7 @@ const Nintendo = () => {
                 }
             };
         }, []);
-    //[ Sec 06 ]
-//     const slideWrapRef = useRef();
-//     const slideBoxRef = useRef();
-//     const slideRef = useRef([]);
 
-//     const [isMouseDown, setIsMouseDown] = useState(false);
-//     const [startPos, setStartPos] = useState(0);
-//     const [endPos, setEndPos] = useState(0);
-//     const [translateZ, setTranslateZ] = useState(0);
-
-//     const handleMouseMove = throttle((e) => {
-//         e.stopPropagation();
-//         setEndPos(e.clientX);
-//     }, 0);
-
-//     const handleMouseDown = (e) => {
-//         setIsMouseDown(true);
-//         setStartPos(e.clientX);
-//     };
-
-//     const motionVal = useMotionValue(0);
-//     const slideScroll = useSpring(motionVal, {
-//         bounce: 0,
-//         damping: 25,
-//         velocity: 2,
-//     });
-
-//   useEffect(() => {
-//     function setSlide() {
-//       const slide = slideRef.current;
-//       const z = Math.round(
-//         slideBoxRef.current.offsetHeight / 2 / Math.tan(Math.PI / slide.length)
-//       );
-//       setTranslateZ(z);
-//       slide.forEach((el, idx) => {
-//         el.style.transform =
-//           "rotateY(" +
-//           (360 / slide.length) * idx +
-//           "deg) translateZ(" +
-//           z +
-//           "px)";
-//       });
-//     }
-//     setSlide();
-
-//     window.addEventListener("resize", setSlide);
-//     slideBoxRef.current.addEventListener("mousedown", handleMouseDown);
-
-//     return () => {
-//       window.removeEventListener("resize", setSlide);
-//     };
-//   }, []);
-
-//   useEffect(() => {
-//     let mousePos = startPos - endPos;
-//     motionVal.set(motionVal.get() + mousePos * 0.05);
-//   }, [endPos]);
-
-//   useEffect(() => {
-//     const handleMouseUp = () => {
-//       setIsMouseDown(false);
-//       slideBoxRef.current.removeEventListener("mousemove", handleMouseMove);
-//     };
-//     if (isMouseDown) {
-//       slideBoxRef.current.addEventListener("mousemove", handleMouseMove);
-//       window.addEventListener("mouseup", handleMouseUp);
-//     }
-
-//     return () => {
-//       window.removeEventListener("mouseup", handleMouseUp);
-//     };
-//   }, [isMouseDown]);
-
-    
   return (
     <>
     <div className="header" style={{width:"100%"}}>
@@ -617,59 +544,7 @@ const Nintendo = () => {
         </div>
         <img className="bg-kirby" src="image/Sec05/bg_kirby.png" alt="워프스타를 타고있는 커비 이미지"/>
     </section>
-    
-    {/* <section className="moreservice" style={{ width: "100%" }}>
-      <div id="moreservice">
-        <div>
-          <img className="plusimg" src="image/Sec06/plus.png" />
-        </div>
-        <h3>추가 팩 가입 시</h3>
-        <div className={styles.slideBox} ref={slideBoxRef}>
-          <div
-            className="slide-container"
-            style={{ perspective: translateZ * 2 + "px" }}
-          >
-            <motion.ul
-              className={clsx(styles.slideWrap, "slide-wrap")}
-              ref={slideWrapRef}
-              style={{
-                z: translateZ + "px",
-                rotateY: slideScroll,
-              }}
-            >
-              {Array.from({ length: 12 }).map((_, idx) => {
-                const items = [
-                  "Nintendo 64™ Nintendo Switch Online",
-                  "Game Boy Advance Nintendo Switch Online",
-                  "SEGA Mega Drive Nintendo Switch Online",
-                  "모여봐요 동물의 숲 해피 홈 파라다이스",
-                  "스플래툰 2 Octo Expansion",
-                  "마리오 카트 8 디럭스 부스터 코스 패스",
-                ];
-                const item = items[idx % items.length];
-                return (
-                  <li
-                    className={clsx("slide", styles.slide)}
-                    key={item + idx}
-                    ref={(el) => (slideRef.current[idx] = el)}
-                  >
-                    <div className="slide-content">
-                      <img
-                        src={`image/Sec06/${
-                          item.split(" ")[0].toLowerCase()
-                        }.png`}
-                        alt={`${item} 이미지`}
-                      />
-                      <span>{item}</span>
-                    </div>
-                  </li>
-                );
-              })}
-            </motion.ul>
-          </div>
-        </div>
-      </div>
-    </section> */}
+
     <section className="moreservice" style={{width: "100%"}}>
         <div id="moreservice">
             <div>
@@ -756,6 +631,7 @@ const Nintendo = () => {
             </div>
         </div>
     </section>
+
     <section className="plan" style={{width: "100%"}}>
         <div id="plan">
             <img style={{width:"378px", height: "220px"}} src="image/Sec07/콩돌밤돌.png" />
