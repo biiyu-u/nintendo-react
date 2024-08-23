@@ -174,12 +174,12 @@ export default function MainSectionRecruit(props) {
           >
             {Array.from({ length: 12 }).map((_, idx) => {
               const items = [
-                "Strategy Planner",
-                "Product Manager",
-                "ui/ux designer",
-                "ios developer",
-                "android developer",
-                "web developer",
+                "Nintendo 64™ Nintendo Switch Online",
+                "Game Boy Advance Nintendo Switch Online",
+                "SEGA Mega Drive Nintendo Switch Online",
+                "모여봐요 동물의 숲 해피 홈 파라다이스",
+                "스플래툰 2 Octo Expansion",
+                "마리오 카트 8 디럭스 부스터 코스 패스",
               ];
               const item = items[idx % items.length]; // 아이템을 순환하도록 설정
               return (
@@ -203,9 +203,9 @@ export default function MainSectionRecruit(props) {
                     <div className={clsx(styles.slideImg)}>
                       <img
                         src={
-                          "/images/main/img_recruit_slide_0" +
+                          "/image/Sec06/img_recruit_slide_0" +
                           ((idx % items.length) + 1) +
-                          ".webp"
+                          ".png"
                         }
                       />
                     </div>
