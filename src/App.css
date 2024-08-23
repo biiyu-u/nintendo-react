@@ -539,7 +539,7 @@ body {
     position: absolute;
     width: 250px; height: 254px;
 
-    bottom:2500px; right: 15%;
+    bottom:4500px; right: 15%;
     z-index: -99;
 
     opacity: 0.5;
