@@ -4,7 +4,7 @@ import { throttle } from "lodash";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import clsx from "clsx";
 
-export default function MainSectionRecruit(props) {
+export default function Plus(props) {
   const bgChangeRef = useRef();
   const scrollRef = useRef();
   const slideWrapRef = useRef();

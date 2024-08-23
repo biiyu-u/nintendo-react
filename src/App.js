@@ -1,12 +1,28 @@
 import './App.css';
-import Nintendo from './nintendo';
-import MainSectionRecruit from './Section05new/index';
+import Header from './nintendo/00header';
+import Visual from './nintendo/01visual';
+import Bestgame from './nintendo/02bestgame';
+import Newgame from './nintendo/03newgame';
+import Online from './nintendo/04online';
+import Service from './nintendo/05service';
+import Plus from './nintendo/06plus/index';
+import Plan from './nintendo/07plan';
+import Bottom from './nintendo/08bottom';
+import Footer from './nintendo/09footer';
 
 function App() {
   return (
     <>
-    <Nintendo/>
-    <MainSectionRecruit />
+    <Header />
+    <Visual />
+    <Bestgame />
+    <Newgame />
+    <Online />
+    <Service />
+    <Plus />
+    <Plan />
+    <Bottom />
+    <Footer />
     </>
   );
 }
