@@ -22,10 +22,11 @@
 @function getVh($px, $base-vh: 1080px) {
   @return ($px * 100vh) / $base-vh;
 }
-
+.plusImg{
+  margin: 0 auto;
+}
 .slideBox {
-  // margin: 500px auto;
-  padding: 0 0 200px;
+  padding: 500px 0 500px;
   .slideContainer {
     width: 100%;
     position: relative;
