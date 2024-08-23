@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom';
 
 const Newgame = () => {
 
@@ -40,41 +41,50 @@ const Newgame = () => {
         <div id="new-game">
             <h3 className="new-game-title">NEW GAME</h3>
             <ul className="new-game-list">
+                
                 <li className="contents">
-                    <div className="container"
-                    ref={(el) => containersRef.current[0] = el}>
-                        <div className="card"></div>
-                    </div>
+                    <Link to="https://www.nintendo.co.kr/switch/banra/">
+                        <div className="container"
+                        ref={(el) => containersRef.current[0] = el}>
+                            <div className="card"></div>
+                        </div>
+                    </Link>
                     <div className="new-game-text">
                         <h3>Luigi Mansion 2 HD</h3>
                         <p>루이지 맨션 2 HD</p>
                     </div> 
                 </li>
                 <li className="contents">
-                    <div className="container"
-                    ref={(el) => containersRef.current[1] = el}>
-                        <div className="card"></div>
-                    </div>
+                    <Link to="https://www.nintendo.co.kr/switch/a9qda/">
+                        <div className="container"
+                        ref={(el) => containersRef.current[1] = el}>
+                            <div className="card"></div>
+                        </div>
+                    </Link>
                     <div className="new-game-text">
                         <h3>Paper Mario The Thousand-year Door</h3>
                         <p>페이퍼 마리오 1000년의 문</p>
                     </div>
                 </li>
                 <li className="contents">
-                    <div className="container"
-                    ref={(el) => containersRef.current[2] = el}>
-                        <div className="card"></div>
-                    </div>
+                    <Link to="https://www.nintendo.co.kr/switch/amjja/">
+                        <div className="container"
+                        ref={(el) => containersRef.current[2] = el}>
+                            <div className="card"></div>
+                        </div>
+                    </Link>
                     <div className="new-game-text">
                         <h3>Princess Peach Showtiome!</h3>
                         <p>프린세스 피치 Showtime!</p>
                     </div>
                 </li>
                 <li className="contents">
-                    <div className="container"
-                    ref={(el) => containersRef.current[3] = el}>
-                        <div className="card"></div>
-                    </div>
+                    <Link to="https://www.nintendo.co.kr/switch/a97pa/">
+                        <div className="container"
+                        ref={(el) => containersRef.current[3] = el}>
+                            <div className="card"></div>
+                        </div>
+                    </Link>
                     <div className="new-game-text">
                         <h3>Mario vs Donkey Kong</h3>
                         <p>마리오 vs. 동키콩</p>
