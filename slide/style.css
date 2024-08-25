@@ -117,11 +117,17 @@ body {
   }
 }
 
-.tranding-slide .tranding-slide-img img {
-  width: 37rem;
-  height: 42rem;
+.tranding-slide .tranding-slide-img  {
+  width: 25rem;
+  height: 32.5rem;
   border-radius: 2rem;
-  object-fit: cover;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.tranding-slide .tranding-slide-img img{
+  position: absolute;
 }
 
 .tranding-slide .tranding-slide-content {

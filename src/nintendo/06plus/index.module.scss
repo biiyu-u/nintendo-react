@@ -103,6 +103,11 @@
             left: getRem(20px);
             text-transform: uppercase;
           }
+          @media (max-width: 786px){
+            .slideText{
+              font-size: 0.7rem;
+            }
+          }
         }
       }
     }
