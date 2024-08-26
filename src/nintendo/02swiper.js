@@ -1,12 +1,14 @@
 import React from "react";
-import SwiperCore, { Navigation, Pagination, EffectCoverflow } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.min.css";
-import "./style.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 
-SwiperCore.use([Navigation, Pagination, EffectCoverflow]);
+// Swiper 모듈을 개별적으로 가져오지 않고 직접 Swiper 컴포넌트에 옵션으로 설정
+import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
-const Swiper = () => {
+const Bestslide = () => {
   return (
     <section id="tranding">
       <div className="container">
@@ -14,6 +16,7 @@ const Swiper = () => {
       </div>
       <div className="container">
         <Swiper
+          modules={[Navigation, Pagination, EffectCoverflow]} // 여기서 플러그인들을 추가
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
@@ -73,4 +76,4 @@ const Swiper = () => {
   );
 };
 
-export default Swiper;
+export default Bestslide;

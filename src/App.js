@@ -2,7 +2,7 @@ import './App.css';
 import Header from './nintendo/00header';
 import Visual from './nintendo/01visual';
 import Bestgame from './nintendo/02bestgame';
-import Swiper from './nintendo/02swiper';
+import Bestslide from './nintendo/02swiper';
 import Newgame from './nintendo/03newgame';
 import Online from './nintendo/04online';
 import Service from './nintendo/05service';
@@ -17,7 +17,7 @@ function App() {
     <Header />
     <Visual />
     <Bestgame />
-    <Swiper />
+    <Bestslide />
     <Newgame />
     <Online />
     <Service />
