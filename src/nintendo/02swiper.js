@@ -10,10 +10,8 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
 const Bestslide = () => {
   return (
-    <section id="tranding">
-      <div className="container">
-        <h1 className="text-center section-heading">BEST GAME</h1>
-      </div>
+    <section id="bestgame">
+        <h1 className="title">BEST GAME</h1>
       <div className="container">
         <Swiper
           modules={[Navigation, Pagination, EffectCoverflow]}
@@ -21,7 +19,7 @@ const Bestslide = () => {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView="auto"
+          slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 0,
             stretch: 30,
@@ -42,12 +40,12 @@ const Bestslide = () => {
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="../image/Sec02/splatoon.png" alt="Splatoon" />
+              <img src="../image/Sec02/zelda.png" alt="Zelda" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="../image/Sec02/zelda.png" alt="Zelda" />
+              <img src="../image/Sec02/sports.png" alt="Sports" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
@@ -57,7 +55,7 @@ const Bestslide = () => {
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="../image/Sec02/sports.png" alt="Sports" />
+              <img src="../image/Sec02/splatoon.png" alt="Splatoon" />
             </div>
           </SwiperSlide>
 

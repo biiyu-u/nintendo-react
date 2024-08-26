@@ -14,30 +14,21 @@
   text-decoration: none;
 }
 
-html {
-  font-size: 62.5%;
-  font-family: 'KoddiUDOnGothic-Regular', sans-serif;
-  color: #fff;
-  scroll-behavior: smooth;
-  background: rgba(220, 2, 19,1);}
-
-
-body {
-  font-size: 1.6rem;
-  background: var(--bg);
-}
-
 .container {
   max-width: 124rem;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 0px auto;
 }
 
-.text-center {
+.title {
+  font-family: 'KoddiUDOnGothic-Regular';
+  font-size: 4rem;
+  letter-spacing: 1px;
   text-align: center;
+  color: #fff;
 }
 
-#tranding {
+#bestgame {
   padding: 4rem 0;
 }
 
@@ -48,21 +39,19 @@ body {
   overflow: hidden;
 }
 
-#tranding .tranding-slider {
+#bestgame .tranding-slider {
   height: 52rem;
   padding: 2rem 0;
-  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tranding-slide {
   width: 37rem;
   height: 42rem;
   position: relative;
-}
-
-.swiper-slide-shadow-left,
-.swiper-slide-shadow-right {
-  display: none;
+  box-shadow: 0px 0px 30px black;
+  border-radius: 2rem;
 }
 
 .tranding-slider-control {
@@ -110,14 +99,26 @@ body {
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+#bestgame .tranding-slider {
+  height: 45rem;
+  width: 61.7rem;
+}
+.tranding-slide {
+  width: 28rem !important;
+  height: 36rem !important;
+}
+.tranding-slide .tranding-slide-img img {
+  width: 28rem !important;
+  height: 36rem !important;
+}
 
 @media (max-width:1440px) {
-  #tranding {
+  #bestgame {
     padding: 7rem 0;
   }
 }
-@media (max-width:500px) {
-  #tranding .tranding-slider {
+/* @media (max-width:500px) {
+  #bestgame .tranding-slider {
     height: 45rem;
   }
   .tranding-slide {
@@ -128,7 +129,7 @@ body {
     width: 28rem !important;
     height: 36rem !important;
   }
-}
+} */
 @media (max-width:990px) {
   .tranding-slider-control .swiper-button-prev {
     left: 30% !important;
