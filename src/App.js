@@ -16,7 +16,7 @@ function App() {
     <>
     <Header />
     <Visual />
-    <Bestgame />
+    {/* <Bestgame /> */}
     <Bestslide />
     <Newgame />
     <Online />
