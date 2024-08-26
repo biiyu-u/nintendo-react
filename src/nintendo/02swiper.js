@@ -4,8 +4,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-coverflow";
+import "../style.css"
 
-// Swiper 모듈을 개별적으로 가져오지 않고 직접 Swiper 컴포넌트에 옵션으로 설정
 import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
 const Bestslide = () => {
@@ -16,7 +16,7 @@ const Bestslide = () => {
       </div>
       <div className="container">
         <Swiper
-          modules={[Navigation, Pagination, EffectCoverflow]} // 여기서 플러그인들을 추가
+          modules={[Navigation, Pagination, EffectCoverflow]}
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
@@ -37,36 +37,36 @@ const Bestslide = () => {
         >
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="image/wonder.png" alt="Wonder" />
+              <img src="../image/Sec02/wonder.png" alt="Wonder" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="image/splatoon.png" alt="Splatoon" />
+              <img src="../image/Sec02/splatoon.png" alt="Splatoon" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="image/zelda.png" alt="Zelda" />
+              <img src="../image/Sec02/zelda.png" alt="Zelda" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="image/cart.png" alt="Cart" />
+              <img src="../image/Sec02/cart.png" alt="Cart" />
             </div>
           </SwiperSlide>
           <SwiperSlide className="tranding-slide">
             <div className="tranding-slide-img">
-              <img src="image/sports.png" alt="Sports" />
+              <img src="../image/Sec02/sports.png" alt="Sports" />
             </div>
           </SwiperSlide>
 
           <div className="tranding-slider-control">
             <div className="swiper-button-prev slider-arrow">
-              <img src="image/prev_btn.png" alt="Previous" />
+              <img src="../image/Sec02/prev_btn.png" alt="Previous" />
             </div>
             <div className="swiper-button-next slider-arrow">
-              <img src="image/next_btn.png" alt="Next" />
+              <img src="../image/Sec02/next_btn.png" alt="Next" />
             </div>
             <div className="swiper-pagination"></div>
           </div>
