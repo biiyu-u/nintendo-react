@@ -21,41 +21,6 @@ html {
   scroll-behavior: smooth;
   background: rgba(220, 2, 19,1);}
 
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
-}
-
-::-webkit-scrollbar {
-  width: 1.3rem;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 1rem;
-  background: #797979;
-  transition: all 0.5s ease-in-out;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #222224;
-}
-
-::-webkit-scrollbar-track {
-  background: #f9f9f9;
-}
 
 body {
   font-size: 1.6rem;
@@ -72,20 +37,15 @@ body {
   text-align: center;
 }
 
-.section-heading {
-  font-size: 3rem;
-  color: var(--primary);
-  padding: 2rem 0;
-}
-
 #tranding {
   padding: 4rem 0;
 }
 
-@media (max-width:1440px) {
-  #tranding {
-    padding: 7rem 0;
-  }
+.tranding-slide .tranding-slide-img img  {
+  width: 25rem;
+  height: 32.5rem;
+  border-radius: 2rem;
+  overflow: hidden;
 }
 
 #tranding .tranding-slider {
@@ -94,72 +54,12 @@ body {
   position: relative;
 }
 
-@media (max-width:500px) {
-  #tranding .tranding-slider {
-    height: 45rem;
-  }
-}
-
 .tranding-slide {
   width: 37rem;
   height: 42rem;
   position: relative;
-}
 
-@media (max-width:500px) {
-  .tranding-slide {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
-  .tranding-slide .tranding-slide-img img {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
-}
-
-.tranding-slide .tranding-slide-img  {
-  width: 25rem;
-  height: 32.5rem;
-  border-radius: 2rem;
-  overflow: hidden;
-
-  position: relative;
-}
-
-.tranding-slide .tranding-slide-img img{
-  position: absolute;
-}
-
-.tranding-slide .tranding-slide-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.tranding-slide-content .food-price {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: var(--white);
-}
-
-.tranding-slide-content .tranding-slide-content-bottom {
-  position: absolute;
-  bottom: 2rem;
-  left: 2rem;
-  color: var(--white);
-}
-
-.food-rating {
-  padding-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-.rating ion-icon {
-  color: var(--primary);
+  margin-right: 0rem;
 }
 
 .swiper-slide-shadow-left,
@@ -178,34 +78,6 @@ body {
 .tranding-slider-control .swiper-button-next {
   left: 58% !important;
   transform: translateX(-58%) !important;
-}
-
-@media (max-width:990px) {
-  .tranding-slider-control .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-@media (max-width:450px) {
-  .tranding-slider-control .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
-
-@media (max-width:990px) {
-  .tranding-slider-control .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
-
-@media (max-width:450px) {
-  .tranding-slider-control .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
-  }
 }
 
 .tranding-slider-control .slider-arrow {
@@ -239,4 +111,44 @@ body {
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+
+@media (max-width:1440px) {
+  #tranding {
+    padding: 7rem 0;
+  }
+}
+@media (max-width:500px) {
+  #tranding .tranding-slider {
+    height: 45rem;
+  }
+  .tranding-slide {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+  .tranding-slide .tranding-slide-img img {
+    width: 28rem !important;
+    height: 36rem !important;
+  }
+}
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
 }
