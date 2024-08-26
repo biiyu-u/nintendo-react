@@ -3,12 +3,12 @@ let TrandingSlider = new Swiper('.tranding-slider', {
     grabCursor: true,
     centeredSlides: true,
     loop: true,
-    slidesPerView:3,
-    spaceBetween: 220,
+    slidesPerView:5,
+    spaceBetween:0,
     coverflowEffect: {
       rotate: 0,
-      stretch: 0,
-      depth: 100,
+      stretch: 10,
+      depth: 200,
       modifier: 2.5,
     },
     pagination: {
