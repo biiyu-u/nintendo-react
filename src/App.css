@@ -981,8 +981,6 @@ body {
     }
 
     .nintendo-slide {
-        display: none;
-
         position: absolute;
         top: 50px;
         width: 100%;

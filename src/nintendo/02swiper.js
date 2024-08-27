@@ -78,7 +78,7 @@ const Bestslide = () => {
           <div className="gametitle">
                 <h3>Super Mario Bros. Wonder</h3>
                 <p>슈퍼 마리오브라더스 원더</p>
-              </div>
+          </div>
           <div className="tranding-slider-control">
             <div className="swiper-button-prev slider-arrow">
               <img src="../image/Sec02/prev_btn.png" alt="Previous" />

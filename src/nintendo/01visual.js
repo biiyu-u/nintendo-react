@@ -35,9 +35,6 @@ const Visual = () => {
                     backgroundPosition: `${currentPosition}px 0px`, 
                     transition: 'background-position 0.7s' }}></div>
             </div>
-            <video muted autoPlay loop>
-            <source src="/video/프린세스 피치 Showtime!.mp4" type="video/mp4" />
-        </video>
         </div>
         <img className="bg-orange" src="../public/image/Sec01/orange.png"/>
     </section>
