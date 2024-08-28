@@ -1002,6 +1002,28 @@ body {
     .bg-orange{
         display: none;
     }
+    .nintendo-slide-button{
+        position: relative;
+        width: 80%;
+        top:680px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .slide-prev{
+        background-image: url(../public/image/Sec02/prev_btn.png);
+        width: 72px;height: 72px;
+        top: 0px; left:0px;
+        z-index: 999;
+    }
+    .slide-next{
+        background-image: url(../public/image/Sec02/next_btn.png);
+        width: 72px;height: 72px;
+        top: 0px; left:0px;
+        z-index: 999;
+        
+    }
     
     /*******  [ Sec 02 ]  ********/
     #best-game{
@@ -1487,12 +1509,6 @@ body{
 }
 .best-game-wrapper{
     margin: 0 auto;
-}
-.prevBtn{
-    display: none;
-}
-.nextBtn{
-    display: none;
 }
 .best-game-text h3{
     font-size: 1.5em;

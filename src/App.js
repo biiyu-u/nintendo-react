@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 import Header from './nintendo/00header';
 import Visual from './nintendo/01visual';
@@ -12,11 +13,21 @@ import Bottom from './nintendo/08bottom';
 import Footer from './nintendo/09footer';
 
 function App() {
+  useEffect(() => {
+    const handleResize = () => {
+        window.location.reload();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []);
   return (
     <>
     <Header />
     <Visual />
-    {/* <Bestgame /> */}
     <Bestslide />
     <Newgame />
     <Online />

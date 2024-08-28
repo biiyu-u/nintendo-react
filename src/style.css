@@ -106,24 +106,3 @@
     height: 36rem !important;
   }
 }
-@media (max-width:990px) {
-  .slide-bottom .button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-  .slide-bottom .button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-@media (max-width:450px) {
-  .slide-bottom .button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
-  }
-  .slide-bottom .button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
