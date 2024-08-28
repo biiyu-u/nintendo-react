@@ -48,15 +48,23 @@
   padding: 2rem 0;
   left: 50%;
   transform: translateX(-50%);
+  /* overflow: unset; */
 }
 
 .tranding-slide {
+  /* display: none; */
+
   width:25rem ;
   height: 32.5rem;
   aspect-ratio: 400/520 ;
   position: relative;
   box-shadow: 0px 0px 30px black;
   border-radius: 2rem;
+}
+.swiper-slide-prev,
+.swiper-slide-active,
+.swiper-slide-next {
+  display: block;
 }
 .tranding-slide .tranding-slide-img img {
   width:25rem ;

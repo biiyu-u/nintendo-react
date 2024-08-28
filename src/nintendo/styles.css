@@ -1,0 +1,53 @@
+
+/*******  [ Sec 06 : Mobile ]  ********/
+#moreservice{
+    display: none;
+}
+@media (max-width: 786px){
+#moreservice{
+    display: block;
+    width: 100%;
+    margin: 200px auto;
+}
+.moreservice{
+    color: #fff;
+    overflow: hidden;
+    z-index: 2;
+}
+.moreservice h3 {
+    color: white;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 50px;
+    margin: 50px;
+
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 120px;
+}
+.slide-container{
+    text-align: left;
+    font-size: 18px;
+    background: linear-gradient(-20deg,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
+    border: 2px solid rgba(234,99,37,1) ;
+    border-radius: .8125rem;
+
+    width: 250px !important; height: 250px;
+    transform: rotate(-6deg);
+}
+.slide-container img{
+    width: 12vw;
+}
+.slide-container span{
+    font-family: 'KoddiUDOnGothic-Regular';
+    font-size: .9375rem;
+    font-weight: bold;
+    left: 1.25rem;
+    letter-spacing: 0px;
+    line-height: 1.2;
+    position: absolute;
+    text-transform: uppercase;
+    top: 1.25rem;
+}
+}
