@@ -48,11 +48,11 @@
   padding: 2rem 0;
   left: 50%;
   transform: translateX(-50%);
-  /* overflow: unset; */
+  overflow: unset;
 }
 
 .tranding-slide {
-  /* display: none; */
+  display: none;
 
   width:25rem ;
   height: 32.5rem;
