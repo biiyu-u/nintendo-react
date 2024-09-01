@@ -33,7 +33,7 @@ function App() {
     <Online />
     <Service />
     <Plus />
-    {/* <Plusmobile /> */}
+    <Plusmobile />
     <Plan />
     <Bottom />
     <Footer />

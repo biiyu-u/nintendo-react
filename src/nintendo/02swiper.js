@@ -90,6 +90,7 @@ const Bestslide = () => {
           <img src="../image/Sec02/next_btn.png" alt="Next" />
         </div>
       </div>
+      <img className="bg-mario" src="../image/Sec02/bg_mario.png" alt="날고있는 마리오 이미지"/>
     </section>
   );
 };

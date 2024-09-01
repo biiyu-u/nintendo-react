@@ -60,7 +60,7 @@ const Visual = () => {
                         ></div>
                     </div>
                 </div>
-                <img className="bg-orange" src="../public/image/Sec01/orange.png" />
+                <div className='bg-orange'></div>
             </section>
         </>
     );

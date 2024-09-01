@@ -310,10 +310,12 @@ body {
     position: absolute;
     left: 0px; top: 800px;
     z-index: -999;
+    background-image: url(../public/image/Sec01/orange.png);
+    background-repeat: no-repeat;
 }
 
 /*******  [ Sec 02 ]  ********/
-#best-game{
+/* #best-game{
     width: 100%;
     margin: 100px auto;
 }
@@ -422,12 +424,12 @@ body {
 }
 .best-game-text p{
     font-weight: 500;
-}
+} */
 .bg-mario {
     position: absolute;
     width: 600px; height: 497.89px;
 
-    bottom:-1000px; left: -5%;
+    bottom:-700px; left: -5%;
     z-index: -1;
 
     opacity: 0.5;
@@ -904,9 +906,10 @@ body {
     .visual {
         background-image: none;
     }
-    .bg-orange{
-        display: none;
-    }
+    /* .bg-orange{
+        display: block;
+        width: 100%;
+    } */
     .nintendo-slide-button{
         position: relative;
         width: 80%;
@@ -931,7 +934,7 @@ body {
     }
     
     /*******  [ Sec 02 ]  ********/
-    #best-game{
+    /* #best-game{
         width: 100%;
     }
     .best-game-title{
@@ -988,7 +991,7 @@ body {
     }
     .best-game-text p{
         margin-top: 10px;
-    }
+    } */
     .bg-mario{
         width: 450px; height: auto;
         aspect-ratio: 600/497.89;
@@ -1097,11 +1100,14 @@ body {
     
         bottom:-3600px; left: 2%;
     }
+    .plusimg {
+        width: 100%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
     /*******  [ Sec 06 ]  ********/
     #moreservice{
-        width: 100%;
-    }
-    .plusimg {
         width: 100%;
     }
     .moreservice h3 {
