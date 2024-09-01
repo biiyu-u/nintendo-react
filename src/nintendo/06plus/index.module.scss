@@ -22,6 +22,14 @@
 @function getVh($px, $base-vh: 1080px) {
   @return ($px * 100vh) / $base-vh;
 }
+@media (max-width: 786px){
+  .plusText{
+    display: none;
+  }
+  .slideBox{
+    display: none;
+  }
+}
 .plusText {
   position: relative;
   top: 350px;
@@ -102,11 +110,6 @@
             top: getRem(20px);
             left: getRem(20px);
             text-transform: uppercase;
-          }
-          @media (max-width: 786px){
-            .slideText{
-              font-size: 0.7rem;
-            }
           }
         }
       }

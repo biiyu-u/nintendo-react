@@ -117,16 +117,46 @@
     width: 100%;
   }
 }
-@media (max-width:500px) {
+@media (max-width: 884px) {
+  .container {
+    width: 100%;
+    height: auto;
+    padding: 0 1rem;
+    margin: 0px auto;
+  }
+  
+  #bestgame {
+    margin: 0 auto;
+    padding: 4rem 0;
+  }
+  
   #bestgame .tranding-slider {
-    height: 45rem;
+    height: auto;
+    width: 100%;
   }
-  .tranding-slide {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
+  
   .tranding-slide .tranding-slide-img img {
-    width: 28rem !important;
-    height: 36rem !important;
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+  
+  .tranding-slide .tranding-slide-img {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+  }
+  
+  .swiper-slide {
+    width: calc(50% - 2rem);
+    height: auto;
+    border-radius: 2rem;
+  }
+
+  .slide-bottom {
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
 }

@@ -1176,9 +1176,17 @@ body {
     }
 }
 
+@media (max-width: 1130px){
+.nintendo-slide-button{
+    top:75%;
+}
+}
 @media (max-width: 1041px){
 .header .inner .gnb p {
     font-size: 1.2em ;
+}
+.nintendo-slide-button{
+    top:70%;
 }
 }
 @media (max-width: 996px){
@@ -1192,6 +1200,9 @@ body {
 }
 .header .gnb .menu{
     gap:60px;
+}
+.nintendo-slide-button{
+    top:65%;
 }
 .new-game-list{
     flex-direction: row-reverse;
@@ -1213,6 +1224,9 @@ body {
     .bottom-menu-list li ul li a{
         font-size: 0.9em;
     }
+    .nintendo-slide-button{
+        top:60%;
+    }
 }
 @media (max-width: 885px){
 .header .gnb .menu{
@@ -1220,6 +1234,15 @@ body {
 }
 }
 @media (max-width: 852px){
+    .personal-plan h1, .family-plan h1{
+        font-size: 2.2rem ;
+    }
+    .family-plan div:nth-child(2) p:nth-child(1){
+        font-size:1.6em ;
+    }
+    .personal-plan div:nth-child(2) ul li:nth-child(2) p:nth-child(1) {
+        font-size: 1.6em;
+    }
     .bottom-menu-list li ul li a{
         font-size: 0.8em;
     }
@@ -1233,6 +1256,9 @@ body {
     .best-game-list{
         width: 100%;
     }
+    .nintendo-slide-button{
+        top:55%;
+    }
 }
 @media (max-width: 813px){
     .bottom-menu-list li h3{
@@ -1243,6 +1269,17 @@ body {
 .header .gnb .menu{
     gap:34px;
 }
+}
+@media (max-width: 798px){
+    .personal-plan h1, .family-plan h1{
+        font-size: 2.1rem ;
+    }
+    .family-plan div:nth-child(2) p:nth-child(1){
+        font-size:1.4em ;
+    }
+    .personal-plan div:nth-child(2) ul li:nth-child(2) p:nth-child(1) {
+        font-size: 1.4em;
+    }
 }
 @media (max-width: 797px){
     .bottom-menu-list li ul li a{
@@ -1411,7 +1448,20 @@ body{
 .nintendo-slide {
     top:100px;
 }
+.nintendo-slide-button{
+    top:58%;
+}
+.slide-prev{
+    width: 40px;height: 40px;
+}
+.slide-next{
+    width: 40px;height: 40px;
+    
+}
 /*******  [ Sec 02 ]  ********/
+#bestgame{
+    margin: 100px auto !important;
+}
 .best-game-title{
     font-size: 3rem;
 }
@@ -1427,7 +1477,10 @@ body{
 .bg-mario{
     width: 400px; height: auto;
     aspect-ratio: 600/497.89;
-    bottom:-500px; left: -5%;
+    bottom:-900px; right: -5%;
+}
+.bg-orange{
+    display: none;
 }
 /*******  [ Sec 03 ]  ********/
 .new-game-title{
@@ -1435,6 +1488,9 @@ body{
 }
 .card {
     border-radius: 10px;
+ }
+ .new-game-text{
+    text-align: center;
  }
 /*******  [ Sec 04 ]  ********/
 .OLED{
@@ -1454,6 +1510,9 @@ body{
     opacity: 0.5;
 }
 /*******  [ Sec 05 ]  ********/
+#service{
+    width: 100%;
+}
 .service-title{
     font-size: 3rem;
 }
@@ -1472,7 +1531,7 @@ body{
     width: 292px; height: auto;
     aspect-ratio: 392/378;
 
-    bottom:-2800px; left: 3%;
+    bottom:-1800px; right: 20%;
 }
 
 .service-list li{
@@ -1553,7 +1612,7 @@ body{
 .plan img{
     width: 200px; height: auto;
     aspect-ratio: 673/392;
-    bottom: 1260px; right: 60px;
+    bottom: 1400px; right: 60px;
 }
 .plan-wrapper{
     padding: 0px;
@@ -1562,12 +1621,10 @@ body{
     display: block;
 }
 .personal-plan{
-    margin: 100px auto !important;
-    width: 450px; height: 500px;
+    width: 450px;
 }
 .family-plan{
-    margin: 100px auto !important;
-    width: 450px; height: 500px;
+    width: 450px;
 }
 /*******  [ Bottom ]  ********/
 #bottom{

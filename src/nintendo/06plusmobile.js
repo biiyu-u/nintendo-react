@@ -17,9 +17,6 @@ const Plusmobile = () => {
     <>
     <section className="moreservice">
         <div id="moreservice">
-            <div>
-                <img className="plusimg" src="image/Sec06/plus.png"/>
-            </div>
             <h3>추가 팩 가입 시</h3>
             <Swiper
         slidesPerView={4}
