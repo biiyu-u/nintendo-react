@@ -44,7 +44,7 @@ const Newgame = () => {
                 
                 <li className="contents">
                     <Link to="https://www.nintendo.co.kr/switch/banra/">
-                        <div className="container"
+                        <div className="card-container"
                         ref={(el) => containersRef.current[0] = el}>
                             <div className="card"></div>
                         </div>
@@ -56,7 +56,7 @@ const Newgame = () => {
                 </li>
                 <li className="contents">
                     <Link to="https://www.nintendo.co.kr/switch/a9qda/">
-                        <div className="container"
+                        <div className="card-container"
                         ref={(el) => containersRef.current[1] = el}>
                             <div className="card"></div>
                         </div>
@@ -68,7 +68,7 @@ const Newgame = () => {
                 </li>
                 <li className="contents">
                     <Link to="https://www.nintendo.co.kr/switch/amjja/">
-                        <div className="container"
+                        <div className="card-container"
                         ref={(el) => containersRef.current[2] = el}>
                             <div className="card"></div>
                         </div>
@@ -80,7 +80,7 @@ const Newgame = () => {
                 </li>
                 <li className="contents">
                     <Link to="https://www.nintendo.co.kr/switch/a97pa/">
-                        <div className="container"
+                        <div className="card-container"
                         ref={(el) => containersRef.current[3] = el}>
                             <div className="card"></div>
                         </div>

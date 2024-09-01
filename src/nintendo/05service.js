@@ -30,7 +30,13 @@ const Service = () => {
             </ul>
         </div>
         <img className="bg-kirby" src="image/Sec05/bg_kirby.png" alt="워프스타를 타고있는 커비 이미지"/>
-        <img className="plusimg" src="image/Sec06/plus.png" />
+        <img className='plusimg'
+        style={{
+            marginTop:"200px",
+            position:"relative",
+            left:"50%",
+            transform:"translateX(-50%)"
+        }} src='image/Sec06/plus.png' />
     </section>
     </>
   )

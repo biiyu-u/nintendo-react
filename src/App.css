@@ -463,7 +463,6 @@ body {
 }
 .contents{
     align-content: center;
-    align-items: center;
     display: flex;
     flex-direction: column;
     
@@ -483,9 +482,8 @@ body {
 .contents:first-child {
     margin-top: 120px;
 }
-.container {
+.card-container {
     width: 361px; height: 585px; transition : all 0.1s;
-    position: relative;
 }
 .card {
     
@@ -911,9 +909,9 @@ body {
         width: 100%;
     } */
     .nintendo-slide-button{
-        position: relative;
-        width: 80%;
-        top:680px;
+        position: absolute;
+        width: 100%;
+        top:80%;
         margin: 0 auto;
         display: flex;
         align-items: center;
@@ -921,13 +919,15 @@ body {
     }
     .slide-prev{
         background-image: url(../public/image/Sec02/prev_btn.png);
-        width: 72px;height: 72px;
+        background-size: cover;
+        width: 60px;height: 60px;
         top: 0px; left:0px;
         z-index: 999;
     }
     .slide-next{
         background-image: url(../public/image/Sec02/next_btn.png);
-        width: 72px;height: 72px;
+        background-size: cover;
+        width: 60px;height: 60px;
         top: 0px; left:0px;
         z-index: 999;
         
@@ -1004,7 +1004,7 @@ body {
     .new-game-title{
         font-size: 3.5rem;
     }
-    .container {
+    .card-container {
         width: 320px; height: auto;
         aspect-ratio: 361 / 585;
         margin: 0 auto;
@@ -1039,7 +1039,7 @@ body {
     }
     /*******  [ Sec 05 ]  ********/
     #service{
-        width: 100%;
+        width: 100%; height: auto;
     }
     .service-title{
         font-size: 3.5rem;
@@ -1102,9 +1102,6 @@ body {
     }
     .plusimg {
         width: 100%;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
     }
     /*******  [ Sec 06 ]  ********/
     #moreservice{
