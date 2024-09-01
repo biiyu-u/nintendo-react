@@ -22,7 +22,7 @@
 @function getVh($px, $base-vh: 1080px) {
   @return ($px * 100vh) / $base-vh;
 }
-@media (max-width: 786px){
+@media (max-width: 768px){
   .plusText{
     display: none;
   }

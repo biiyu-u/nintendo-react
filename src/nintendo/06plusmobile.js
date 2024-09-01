@@ -19,7 +19,7 @@ const Plusmobile = () => {
         <div id="moreservice">
             <h3>추가 팩 가입 시</h3>
             <Swiper
-        slidesPerView={4}
+        slidesPerView={1}
         centeredSlides={true}
         spaceBetween={30}
         grabCursor={true}

@@ -3,7 +3,7 @@
 #moreservice{
     display: none;
 }
-@media (max-width: 786px){
+@media (max-width: 768px){
 #moreservice{
     display: block;
     width: 100%;
@@ -16,7 +16,7 @@
 }
 .moreservice h3 {
     color: white;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     padding-top: 50px;
     margin: 50px;
@@ -37,11 +37,14 @@
     transform: rotate(-6deg);
 }
 .slide-container img{
-    width: 12vw;
+    width: 170px;
+    position: absolute;
+    left: 50%; transform: translate(-50%);
+    top: 20%;
 }
 .slide-container span{
     font-family: 'KoddiUDOnGothic-Regular';
-    font-size: .9375rem;
+    font-size: .8rem;
     font-weight: bold;
     left: 1.25rem;
     letter-spacing: 0px;
