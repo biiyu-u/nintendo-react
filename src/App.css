@@ -1452,14 +1452,7 @@ body{
     top:100px;
 }
 .nintendo-slide-button{
-    top:58%;
-}
-.slide-prev{
-    width: 40px;height: 40px;
-}
-.slide-next{
-    width: 40px;height: 40px;
-    
+    display: none;
 }
 /*******  [ Sec 02 ]  ********/
 #bestgame{

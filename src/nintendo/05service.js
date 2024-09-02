@@ -6,23 +6,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Service = () => {
 
-//   useEffect(() => {
-//     gsap.from(".service-list li img", {
-//       y: 100, 
-//       opacity: 0, 
-//       duration: 1,
-//       ease: "power2.out",
-//       ScrollTrigger: {
-//         trigger: "#service",
-//         start: "top 28%",
-//         end: "bottom 28%",
-//         toggleActions: "play none none reverse",
-//         markers: true,
-//         pin: "#service",
-//       },
-//       stagger: 0.2,
-//     });
-//   }, []);
+  useEffect(() => {
+    
+    gsap.from(".service-list li img", {
+      y: 200, 
+      opacity: 0, 
+      duration: 1,
+      ease: "power2.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: "#service",  
+        start: "40% 28%",     
+        end: "bottom 28%",         
+        markers: true,         
+        pin: true,             
+        scrub: true,           
+      },
+    });
+  }, []);
 
   return (
     <>
