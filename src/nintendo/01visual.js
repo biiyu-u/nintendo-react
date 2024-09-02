@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const Visual = () => {
     // [ Sec 01 ]
-    const fixedSlideWidth = 744; // 고정된 슬라이드 너비
+    const fixedSlideWidth = 744;
     const [slideWidth, setSlideWidth] = useState(fixedSlideWidth);
     const [currentPosition, setCurrentPosition] = useState(0);
 
@@ -11,20 +11,30 @@ const Visual = () => {
             if (window.innerWidth <= 1200) {
                 const nintendoSlide = document.querySelector('.nintendo-slide');
                 if (nintendoSlide) {
-                    setSlideWidth(nintendoSlide.offsetWidth); // 슬라이드 실제 너비 사용
+                    setSlideWidth(nintendoSlide.offsetWidth);
                 }
             } else {
-                setSlideWidth(fixedSlideWidth); // 고정된 너비 사용
+                setSlideWidth(fixedSlideWidth);
             }
         };
 
         window.addEventListener('resize', handleResize);
-        handleResize(); // 컴포넌트 마운트 시 초기화
+        handleResize();
 
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
+
+    useEffect(() => {
+        const autoSlide = setInterval(() => {
+            nextSlide();
+        }, 4000);
+
+        return () => {
+            clearInterval(autoSlide);
+        };
+    }, [currentPosition, slideWidth]);
 
     const prevSlide = () => {
         let newPosition = currentPosition + slideWidth;

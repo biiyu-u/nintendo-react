@@ -1290,6 +1290,9 @@ body {
 .header .gnb .menu{
     gap:30px;
 }
+.nintendo-slide-button{
+    top:53%;
+}
 }
 @media (max-width: 576px){
 .header .inner .gnb p {

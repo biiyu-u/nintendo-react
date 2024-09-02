@@ -13,17 +13,17 @@ import Footer from './nintendo/09footer';
 import Plusmobile from './nintendo/06plusmobile';
 
 function App() {
-//   useEffect(() => {
-//     const handleResize = () => {
-//         window.location.reload();
-//     };
+  useEffect(() => {
+    const handleResize = () => {
+        window.location.reload();
+    };
 
-//     window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-//     return () => {
-//         window.removeEventListener('resize', handleResize);
-//     };
-// }, []);
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []);
   return (
     <>
     <Header />
