@@ -27,6 +27,7 @@
     margin-bottom: 120px;
 }
 .slide-container{
+    padding: 15px;
     text-align: left;
     font-size: 18px;
     background: linear-gradient(-20deg,rgba(230,2,18,1)0%, rgba(234,99,37,1)100%);
@@ -42,6 +43,7 @@
     top: 20%;
 }
 .slide-container span{
+    margin-right: 10px;
     font-family: 'KoddiUDOnGothic-Regular';
     font-size: .8rem;
     font-weight: bold;

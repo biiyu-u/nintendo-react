@@ -1,16 +1,13 @@
 
-import React, { useRef, useState } from 'react';
-// Import Swiper React components
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Pagination } from 'swiper/modules';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
 
 import './styles.css';
-
-// import required modules
-import { Pagination } from 'swiper/modules';
 
 const Plusmobile = () => {
   return (
@@ -23,6 +20,12 @@ const Plusmobile = () => {
         centeredSlides={true}
         spaceBetween={30}
         grabCursor={true}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
+        // loop={true}
+        // modules={[Autoplay, Pagination]}
         className="mySwiper"
       >
         <SwiperSlide className='slide-container'>
