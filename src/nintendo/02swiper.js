@@ -62,8 +62,31 @@ const Bestslide = () => {
               nextEl: ".button-next",
               prevEl: ".button-prev",
             }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+            onSlideChange={(swiper) => {
+              setActiveIndex(swiper.realIndex);
+              swiper.slides.forEach((slide) => {
+                if (slide && slide.style) {
+                  slide.style.opacity = 0;
+                }
+              });
+              const currentSlide = swiper.slides[swiper.activeIndex];
+              const prevSlide = swiper.slides[swiper.activeIndex - 1];
+              const nextSlide = swiper.slides[swiper.activeIndex + 1];
+            
+              if (currentSlide && currentSlide.style) {
+                currentSlide.style.opacity = 1;
+              }
+            
+              if (prevSlide && prevSlide.style) {
+                prevSlide.style.opacity = 1;
+              }
+            
+              if (nextSlide && nextSlide.style) {
+                nextSlide.style.opacity = 1;
+              }
+            }}
             className="tranding-slider"
+            
           >
             {gameTitles.map((game, index) => (
               <SwiperSlide key={index} className="tranding-slide">
