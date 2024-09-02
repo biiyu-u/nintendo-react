@@ -10,16 +10,31 @@ import { Navigation, Pagination, EffectCoverflow } from "swiper/modules";
 
 const Bestslide = () => {
   const gameTitles = [
-    {title: "Super Mario Bros. Wonder",
-      description: "슈퍼 마리오브라더스 원더",},
-    {title: "The Legend of Zelda: Tears of the Kingdom",
-      description: "젤다의 전설 티어스 오브 더 킹덤",},
-    {title: "Nintendo Switch Sports",
-      description: "닌텐도 스위치 스포츠",},
-    {title: "Mario Kart 8 Deluxe",
-      description: "마리오카트 8 디럭스",},
-    {title: "Splatoon 3",
-      description: "스플래툰 3",},
+    {
+      title: "Super Mario Bros. Wonder",
+      description: "슈퍼 마리오브라더스 원더",
+      link: "https://www.nintendo.co.kr/switch/aqmxa/"
+    },
+    {
+      title: "The Legend of Zelda Tears of the Kingdom",
+      description: "젤다의 전설 티어스 오브 더 킹덤",
+      link: "https://www.nintendo.co.kr/zelda/totk/"
+    },
+    {
+      title: "Nintendo Switch Sports",
+      description: "닌텐도 스위치 스포츠",
+      link:"https://www.nintendo.co.kr/switch/as8sa/"
+    },
+    {
+      title: "Mario Kart 8 Deluxe",
+      description: "마리오카트 8 디럭스",
+      link:"https://www.nintendo.co.kr/switch/aabpa/"
+    },
+    {
+      title: "Splatoon 3",
+      description: "스플래툰 3",
+      link:"https://www.nintendo.co.kr/switch/av5ja/"
+    },
   ];
 
   const [activeIndex, setActiveIndex] = useState(0);
@@ -50,31 +65,15 @@ const Bestslide = () => {
             onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
             className="tranding-slider"
           >
-            <SwiperSlide className="tranding-slide">
-              <div className="tranding-slide-img">
-                <img src="../image/Sec02/wonder.png" alt="Wonder" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="tranding-slide">
-              <div className="tranding-slide-img">
-                <img src="../image/Sec02/zelda.png" alt="Zelda" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="tranding-slide">
-              <div className="tranding-slide-img">
-                <img src="../image/Sec02/sports.png" alt="Sports" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="tranding-slide">
-              <div className="tranding-slide-img">
-                <img src="../image/Sec02/cart.png" alt="Cart" />
-              </div>
-            </SwiperSlide>
-            <SwiperSlide className="tranding-slide">
-              <div className="tranding-slide-img">
-                <img src="../image/Sec02/splatoon.png" alt="Splatoon" />
-              </div>
-            </SwiperSlide>
+            {gameTitles.map((game, index) => (
+              <SwiperSlide key={index} className="tranding-slide">
+                <a href={game.link} target="_blank" rel="noopener noreferrer">
+                  <div className="tranding-slide-img">
+                    <img src={`../image/Sec02/${game.title.toLowerCase().replace(/ /g, '')}.png`} alt={game.title} />
+                  </div>
+                </a>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

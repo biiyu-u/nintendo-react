@@ -2,8 +2,6 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react'
 
 const Header = () => {
-
-    // 드롭다운
     const [openDropdown, setOpenDropdown] = useState(null);
       
     const closeAllDropdowns = () => {
