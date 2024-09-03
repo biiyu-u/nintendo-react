@@ -903,11 +903,12 @@ body {
     }
     .visual {
         background-image: none;
+        height: 600px;
     }
-    /* .bg-orange{
+    .bg-orange{
         display: block;
-        width: 100%;
-    } */
+        width: 100%; height: 300%;
+    }
     .nintendo-slide-button{
         position: absolute;
         width: 100%;
@@ -930,72 +931,16 @@ body {
         width: 60px;height: 60px;
         top: 0px; left:0px;
         z-index: 999;
-        
+    }
+    .nintendo-slide-button{
+        display: none;
     }
     
     /*******  [ Sec 02 ]  ********/
-    /* #best-game{
-        width: 100%;
-    }
-    .best-game-title{
-        font-size: 3.5rem;
-    }
-    .best-game-wrapper{
-        width: 100%;
-    }
-    .prevBtn{
-        width: 60px; height: auto;
-        aspect-ratio: 60/60;
-        position: relative;
-        left: 7%;
-    }
-    .nextBtn{
-        width: 60px; height: auto;
-        aspect-ratio: 60/60;
-        position: relative;
-        right: 7%;
-    }
-    .best-main {
-        width: 300px; height: auto;
-        border-radius: 20px;
-        aspect-ratio: 400 / 520;
-        background-size: 250%;
-    }
-    .best-left {
-        width: 250px; height: auto;
-        border-radius: 20px;
-        aspect-ratio: 300 / 396;
-        left:13%;
-    }
-    .best-left:before {
-        border-radius: 20px;
-        aspect-ratio: 300 / 396;
-    
-        background-size: 250%;
-    }
-    
-    .best-right {
-        width: 250px; height: auto;
-        border-radius: 20px;
-        aspect-ratio: 300 / 396;
-        right: 13%;
-    }
-    .best-right:before {
-        border-radius: 20px;
-        aspect-ratio: 300 / 396;
-    
-        background-size: 250%;
-    }
-    .best-game-text h3{
-        font-size: 1.5em;
-    }
-    .best-game-text p{
-        margin-top: 10px;
-    } */
     .bg-mario{
         width: 450px; height: auto;
         aspect-ratio: 600/497.89;
-        bottom:-400px; left: -5%;
+        bottom:-100px; left: -5%;
     }
     /*******  [ Sec 03 ]  ********/
     #new-game{
@@ -1013,6 +958,9 @@ body {
         width: 320px; height: auto;
         aspect-ratio: 361 / 585;
         border-radius: 20px;
+     }
+     .new-game-text{
+        text-align: center;
      }
     /*******  [ Sec 04 ]  ********/
     #online{
@@ -1033,7 +981,7 @@ body {
         width: 225px; height: auto;
         aspect-ratio: 250/254;
         right: 3%;
-        z-index: 2;
+        z-index: -2;
     
         opacity: 0.5;
     }
@@ -1451,9 +1399,7 @@ body{
 .nintendo-slide {
     top:100px;
 }
-.nintendo-slide-button{
-    display: none;
-}
+
 /*******  [ Sec 02 ]  ********/
 #bestgame{
     margin: 100px auto !important;
@@ -1485,9 +1431,7 @@ body{
 .card {
     border-radius: 10px;
  }
- .new-game-text{
-    text-align: center;
- }
+
 /*******  [ Sec 04 ]  ********/
 .OLED{
     aspect-ratio: 541 / 477;
