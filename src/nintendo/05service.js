@@ -5,6 +5,33 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const Service = () => {
+  useEffect(() => {
+    const handleResize = () => {
+      const listItems = document.querySelectorAll('.service-list li');
+
+      listItems.forEach((item) => {
+        const img = item.querySelector('img');
+        if (window.innerWidth > 1200) {
+          item.addEventListener('mouseenter', () => {
+            gsap.to(img, {
+              y: -300,
+              duration: 1,
+              ease: 'power2.out',
+            });
+          });
+        } else {
+          item.removeEventListener('mouseenter', () => {});
+        }
+      });
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <>
